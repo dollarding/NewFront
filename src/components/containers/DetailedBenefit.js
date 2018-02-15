@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as benefitActions from '../../actions/benefitsActions';
@@ -23,9 +24,9 @@ class DetailedBenefit extends React.Component {
     }
 }
 
-// DetailedBenefit.propTypes = {
-//     benefit: PropTypes.object.isRequired
-// };
+DetailedBenefit.propTypes = {
+    benefit: PropTypes.object.isRequired
+};
 
 function getBenefitById(benefits, id){
     const benefit = benefits.filter(benefit => benefit._id == id);

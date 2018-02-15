@@ -1,0 +1,13 @@
+
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: LightSteelBlue;
+}
+
+.gridList {
+    max-width: 1500;
+    height: 600;
+    overflow-Y: auto;
+}

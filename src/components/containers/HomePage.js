@@ -1,8 +1,10 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Benefits from '../benefits/Benefits';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as benefitsActions from '../../actions/benefitsActions';
+import Footer from '../Footer';
 
 class HomePage extends React.Component {
   
@@ -13,15 +15,18 @@ class HomePage extends React.Component {
       render() {
         const {benefits} = this.props;
         return (
+          <div>
           <Benefits benefits={benefits}/>
+          <Footer/>
+          </div>
         );
     }
   }
 
-// HomePage.propTypes = {
-//   actions: PropTypes.object.isRequired,
-//   benefits: PropTypes.array.isRequired
-// };
+HomePage.propTypes = {
+  actions: PropTypes.object.isRequired,
+  benefits: PropTypes.array.isRequired
+};
 
 function mapStateToProps(state) {
   return {

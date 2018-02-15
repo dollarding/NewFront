@@ -1,0 +1,1 @@
+export const FOOD_CATEGORY_VALUE = "55b65840b7b7579d4227b764";

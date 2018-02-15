@@ -17,6 +17,6 @@ class AppLayout extends React.Component {
 
 AppLayout.propTypes = {
     children: PropTypes.array.isRequired
-}
+};
 
 export default AppLayout;

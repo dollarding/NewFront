@@ -12,6 +12,7 @@ import Typography from 'material-ui/Typography';
 const styles = {
   root: {
     width: '100%',
+    hight:'100%',
     backgroundColor: 'SkyBlue',
     zDepth: 2
   },
@@ -24,20 +25,20 @@ const styles = {
   },
 };
 
-const Header = ({classes}) => (
+const Footer = ({classes}) => (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            NewDeals
+            NewDeals Footer
           </Typography>
         </Toolbar>
       </AppBar>
     </div>
 );
 
-Header.propTypes = {
-  classes: PropTypes.object.isRequired,
+Footer.propTypes = {
+    classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Header);
+export default withStyles(styles)(Footer);
