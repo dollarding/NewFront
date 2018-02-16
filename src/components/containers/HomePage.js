@@ -4,7 +4,6 @@ import Benefits from '../benefits/Benefits';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as benefitsActions from '../../actions/benefitsActions';
-import Footer from '../Footer';
 
 class HomePage extends React.Component {
   
@@ -17,7 +16,6 @@ class HomePage extends React.Component {
         return (
           <div>
           <Benefits benefits={benefits}/>
-          <Footer/>
           </div>
         );
     }

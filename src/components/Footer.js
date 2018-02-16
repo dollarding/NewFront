@@ -12,24 +12,20 @@ import Typography from 'material-ui/Typography';
 const styles = {
   root: {
     width: '100%',
-    hight:'100%',
     backgroundColor: 'SkyBlue',
-    zDepth: 2
+    zDepth: 2,
   },
   flex: {
     flex: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  },
+    minHeight: '75px'
+  }
 };
 
 const Footer = ({classes}) => (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
+        <Toolbar className={classes.flex}>
+          <Typography variant="title" color="inherit">
             NewDeals Footer
           </Typography>
         </Toolbar>

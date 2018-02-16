@@ -4,6 +4,17 @@ import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as benefitActions from '../../actions/benefitsActions';
 
+const styles = {
+    root: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: 'LightSteelBlue',
+        height: '80%',
+        padding: 4
+    }
+};
 
 class DetailedBenefit extends React.Component {
     constructor(props, context) {
@@ -16,7 +27,7 @@ class DetailedBenefit extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={styles.root}>
                 <h1>Im Detailed Benefit</h1>
                 <h2>{this.state.benefit.couponName}</h2>
             </div>

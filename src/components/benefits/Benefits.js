@@ -14,12 +14,12 @@ const styles = {
         justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: 'LightSteelBlue',
-        hight: '80%',
+        height: '80%',
         padding: 4
     },
     gridList: {
         maxWidth: 1500,
-        height: 600,
+        height: 450,
     },
     gridListTile :{
         hover: {

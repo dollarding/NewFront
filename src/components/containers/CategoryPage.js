@@ -1,60 +1,77 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import BenefitCard from '../benefits/BenefitCard';
-import {GridList , GridTile} from 'material-ui';
-
+import GridList, { GridListTile } from 'material-ui/GridList';
+import benefitImage from '../../img/benefit.jpg';
 
 const styles = {
     root: {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
-        backgroundColor: 'LightSteelBlue'
+        overflow: 'hidden',
+        backgroundColor: 'LightSteelBlue',
+        height: '80%',
+        padding: 4
     },
     gridList: {
         maxWidth: 1500,
-        height: 600,
-        overflowY: 'auto'
-    }
+        height: 450,
+    },
+    gridListTile :{
+        hover: {
+            margin: '12px 12px 12px 12px'
+        }
+    } 
 };
 
 
-class CategoryPage extends Component {
+class CategoryPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             categoryList: []
         };
     }
+
+
     componentWillMount () {
-        console.log("Category Page will mount");
-        event.preventDefault();
-        const category = this.props.match.params.id;
-        const {benefits} = this.props;
-        const categoryList = benefits.filter( (item) => item.categories.some((x) => x === category));
-        return this.setState({categoryList: categoryList});
+        return this.filterBenefitsByCategory(this.props);
+    }
+
+
+    componentWillReceiveProps(nextProps){
+        return this.filterBenefitsByCategory(nextProps);
+    }
+
+    filterBenefitsByCategory = (currentProps) => {
+        const category = currentProps.match.params.id;
+        const categoryList = this.props.benefits.filter( (item) =>
+        item.categories.some((x) => x === category));
+        return this.setState({categoryList: categoryList});  
     }
 
     render() {
         return (
-            <div style={styles.root}>
-                <GridList
-                cols = {4}
-                cellHeight={240}
-                padding={6}
-                style={styles.gridList}
-                >
-                    {this.state.categoryList.map(benefit =>(
-                        <GridTile
-                        key={benefit._id}
-                        >
-                            <BenefitCard key={benefit._id} benefit={benefit}/>
-                        </GridTile>
-                    ))}
-                </GridList>
-            </div>
-            );
+        <div style={styles.root}>
+            <GridList
+            cols = {6}
+            cellHeight={200}
+            padding={6}
+            style={styles.gridList}
+            >
+                {this.state.categoryList.map(benefit =>(
+                    <GridListTile style={styles.gridListTile}
+                    key={benefit._id}
+                    >
+                        <img src={benefitImage} alt={benefit.CouponName}/>
+                        <BenefitCard key={benefit._id} benefit={benefit}/>
+                    </GridListTile>
+                ))}
+            </GridList>
+        </div>
+        );
     }
 }
 
@@ -69,8 +86,7 @@ CategoryPage.propTypes = {
 
 function mapStateToProps(state) {
     return {
-        benefits: state.benefits,
-        routing: state.routing
+        benefits: state.benefits
     };
 }
 

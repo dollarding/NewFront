@@ -13,8 +13,7 @@ import HelpIcon from 'material-ui-icons/Help';
 import ShoppingBasket from 'material-ui-icons/ShoppingBasket';
 import ThumbDown from 'material-ui-icons/ThumbDown';
 import ThumbUp from 'material-ui-icons/ThumbUp';
-import { FOOD_CATEGORY_VALUE } from '../../constants/categoriesTypes';
-
+import { FOOD_CATEGORY_VALUE, OPTIC_CATEGORY_VALUE } from '../../constants/categoriesTypes';
 
 const styles = theme => ({
   root: {
@@ -29,31 +28,31 @@ class CategoriesMenu extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      value: 0,
+      value: 0
     };
   }
 
-  handleChange = () => {
-    this.props.history.pushState({},"","category/" + FOOD_CATEGORY_VALUE);
+  handleChange = (event, value) => {
+    this.setState({value});
   };
 
   render() {
     const { classes } = this.props;
-    const { value } = this.state;
 
     return (
       <div className={classes.root}>
         <AppBar position="static" color="default">
           <Tabs
-            value={value}
+            value={this.state.value}
             onChange={this.handleChange}
             scrollable
             scrollButtons="auto"
             indicatorColor="primary"
             textColor="primary"
           >
-          <Tab label="Food" icon={<PhoneIcon />}/>
-            <Tab label="Sport" icon={<FavoriteIcon />} />
+            <Tab label="Everything" icon={<FavoriteIcon />} to={"/"} component={Link}/>
+            <Tab label="Food" icon={<PhoneIcon />} to={"/category/" + FOOD_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Optic" icon={<FavoriteIcon />} to={"/category/" + OPTIC_CATEGORY_VALUE} component={Link}/>
             <Tab label="Electronics" icon={<PersonPinIcon />} />
             <Tab label="For Home" icon={<HelpIcon />} />
             <Tab label="Item Five" icon={<ShoppingBasket />} />
@@ -66,18 +65,6 @@ class CategoriesMenu extends React.Component {
             <Tab label="Item Twelve" icon={<ShoppingBasket />} />
           </Tabs>
         </AppBar>
-        {/* {value === 0}
-        {value === 1 && <Route path='/' component={ProductPage} />}
-        {value === 2 && <Link to={"/category/" + {value}}/>}
-        {value === 3 && <Link to={"/category/" + {value}}/>}
-        {value === 4 && <Link to={"/category/" + {value}}/>}
-        {value === 5 && <Link to={"/category/" + {value}}/>}
-        {value === 6 && <Link to={"/category/" + {value}}/>}
-        {value === 7 && <Link to={"/category/" + {value}}/>}
-        {value === 8 && <Link to={"/category/" + {value}}/>}
-        {value === 9 && <Link to={"/category/" + {value}}/>}
-        {value === 10 && <Link to={"/category/" + {value}}/>}
-        {value === 11 && <Link to={"/category/" + {value}}/>} */}
       </div>
     );
   }
