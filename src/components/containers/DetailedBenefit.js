@@ -11,7 +11,7 @@ const styles = {
         justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: 'LightSteelBlue',
-        height: '80%',
+        height: 445,
         padding: 4
     }
 };
@@ -24,6 +24,10 @@ class DetailedBenefit extends React.Component {
             benefit: Object.assign({}, this.props.benefit),
         };
     }
+
+    // componentWillReceiveProps(nextProps){
+    //     this.setState({benefit: getBenefitById(this.props.benefits)})
+    // }
 
     render() {
         return (
@@ -47,7 +51,7 @@ function getBenefitById(benefits, id){
 
 function mapStateToProps(state, ownProps) {
     const benefitId = ownProps.match.params.id; // from the path '/benefit/:id'
-    let benefit = {id:"", watchHref:"", title:"", authorId:"", length:"", category:""};
+    let benefit = {};
     if (benefitId){
         benefit = getBenefitById(state.benefits, benefitId);
         }

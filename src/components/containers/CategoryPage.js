@@ -5,19 +5,21 @@ import BenefitCard from '../benefits/BenefitCard';
 import GridList, { GridListTile } from 'material-ui/GridList';
 import benefitImage from '../../img/benefit.jpg';
 
+//TODO: add componentWillReceiveProps
 const styles = {
     root: {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: 'LightSteelBlue',
+        backgroundColor: '#e0e0e0',
         height: '80%',
         padding: 4
     },
     gridList: {
-        maxWidth: 1500,
         height: 450,
+        width: '100%',
+        justifyContent: 'space-evenly'
     },
     gridListTile :{
         hover: {

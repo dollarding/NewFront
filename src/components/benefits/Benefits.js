@@ -1,52 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BenefitCard from './BenefitCard';
-//import { withStyles } from 'material-ui/styles';
-import GridList, { GridListTile} from 'material-ui/GridList';
-import benefitImage from '../../img/benefit.jpg';
-//import IconButton from 'material-ui/IconButton';
-//import StarBorderIcon from 'material-ui-icons/StarBorder';
+import GridList from 'material-ui/GridList';
+import * as categories from '../../constants/categoriesTypes';
+
+import SingleLineCategory from './SingleLineCategory';
+
+const Categories = [
+    {title:"תרבות", categoryType: categories.CULTURE_CATEGORY_VALUE},
+    {title:"חשמל ומחשבים", categoryType: categories.ElECTRONICS_CATEGORY_VALUE},
+    {title:"אופנה", categoryType: categories.FASHION_CATEGORY_VALUE},
+    {title:"אוכל", categoryType: categories.FOOD_CATEGORY_VALUE},
+    {title:"לבית", categoryType: categories.FOR_HOME_CATEGORY_VALUE},
+    {title:"כללי", categoryType: categories.GENERAL_CATEGORY_VALUE},
+    {title:"מתנות", categoryType: categories.GIFTS_CATEGORY_VALUE},
+    {title:"ילדים", categoryType: categories.KIDS_CATEGORY_VALUE},
+    {title:"למשרד", categoryType: categories.OFFICE_CATEGORY_VALUE},
+    {title:"אופטיקה", categoryType: categories.OPTIC_CATEGORY_VALUE},
+    {title:"בעלי מקצוע", categoryType: categories.PROFESSIONALS_CATEGORY_VALUE},
+    {title:"ספורט", categoryType: categories.SPORT_CATEGORY_VALUE},
+    {title:"תיירות", categoryType: categories.TOURISM_CATEGORY_VALUE}
+    
+];
+
 
 const styles = {
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
+        justifyContent: 'stretch',
+        alignItems: 'center',
+        alignContent: 'space-around',
+        flexDirection: 'column',
         overflow: 'hidden',
-        backgroundColor: 'LightSteelBlue',
-        height: '80%',
+        backgroundColor: '#e0e0e0',
+        height: '100%',
         padding: 4
     },
     gridList: {
-        maxWidth: 1500,
-        height: 450,
-    },
-    gridListTile :{
-        hover: {
-            margin: '12px 12px 12px 12px'
-        }
-    } 
+        maxWidth: '100%',
+        height: 447,
+        justifyContent: 'center',
+        width: '100%',
+        
+    }
 };
 
+function filterBenefitsByCategory (benefits, category) {
+    const categoryList = benefits.filter( (item) =>
+    item.categories.some((x) => x === category.categoryType));
+    return categoryList.slice(0,5);
+}
 
 const Benefits = (props) =>{
     return (
+
     <div style={styles.root}>
-        <GridList
-        cols = {6}
-        cellHeight={200}
-        padding={6}
-        style={styles.gridList}
-        >
-            {props.benefits.map(benefit =>(
-                <GridListTile style={styles.gridListTile}
-                key={benefit._id}
-                >
-                    <img src={benefitImage} alt={benefit.CouponName}/>
-                    <BenefitCard key={benefit._id} benefit={benefit}/>
-                </GridListTile>
-            ))}
+        <GridList style={styles.gridList}>
+            {Categories.map(category => 
+                <SingleLineCategory key={category.categoryType} title={category.title} category={category.categoryType} benefits={filterBenefitsByCategory(props.benefits, category)}/>
+            )}
+
         </GridList>
+
     </div>
     );
 };

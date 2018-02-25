@@ -26,7 +26,7 @@ const Footer = ({classes}) => (
       <AppBar position="static">
         <Toolbar className={classes.flex}>
           <Typography variant="title" color="inherit">
-            NewDeals Footer
+            Dollarding Footer
           </Typography>
         </Toolbar>
       </AppBar>

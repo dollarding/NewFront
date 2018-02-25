@@ -6,14 +6,23 @@ import compose from 'recompose/compose';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
-import PhoneIcon from 'material-ui-icons/Phone';
-import FavoriteIcon from 'material-ui-icons/Favorite';
-import PersonPinIcon from 'material-ui-icons/PersonPin';
-import HelpIcon from 'material-ui-icons/Help';
-import ShoppingBasket from 'material-ui-icons/ShoppingBasket';
-import ThumbDown from 'material-ui-icons/ThumbDown';
-import ThumbUp from 'material-ui-icons/ThumbUp';
-import { FOOD_CATEGORY_VALUE, OPTIC_CATEGORY_VALUE } from '../../constants/categoriesTypes';
+import * as categories from '../../constants/categoriesTypes';
+
+import HomeIcon from 'material-ui-icons/Home';
+import FaceIcon from 'material-ui-icons/Face';
+import CardGiftcardIcon from 'material-ui-icons/CardGiftcard';
+import DirectionsRunIcon from 'material-ui-icons/DirectionsRun';
+import ContactMailIcon from 'material-ui-icons/ContactMail';
+import DevicesIcon from 'material-ui-icons/Devices';
+import RestaurantIcon from 'material-ui-icons/Restaurant';
+import PublicIcon from 'material-ui-icons/Public';
+import PersonOutlineIcon from 'material-ui-icons/PersonOutline';
+import FlightIcon from 'material-ui-icons/Flight';
+import AppsIcon from 'material-ui-icons/Apps';
+import RemoveRedEyeIcon from 'material-ui-icons/RemoveRedEye';
+import StyleIcon from 'material-ui-icons/Style';
+import PeopleIcon from 'material-ui-icons/People';
+
 
 const styles = theme => ({
   root: {
@@ -50,19 +59,20 @@ class CategoriesMenu extends React.Component {
             indicatorColor="primary"
             textColor="primary"
           >
-            <Tab label="Everything" icon={<FavoriteIcon />} to={"/"} component={Link}/>
-            <Tab label="Food" icon={<PhoneIcon />} to={"/category/" + FOOD_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Optic" icon={<FavoriteIcon />} to={"/category/" + OPTIC_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Electronics" icon={<PersonPinIcon />} />
-            <Tab label="For Home" icon={<HelpIcon />} />
-            <Tab label="Item Five" icon={<ShoppingBasket />} />
-            <Tab label="Item Six" icon={<ThumbDown />} />
-            <Tab label="Item Seven" icon={<ThumbUp />} />
-            <Tab label="Item Eight" icon={<ShoppingBasket />} />
-            <Tab label="Item Nine" icon={<ShoppingBasket />} />
-            <Tab label="Item Ten" icon={<ShoppingBasket />} />
-            <Tab label="Item Eleven" icon={<ShoppingBasket />} />
-            <Tab label="Item Twelve" icon={<ShoppingBasket />} />
+            <Tab label="Everything" icon={<PublicIcon />} to={"/"} component={Link}/>
+            <Tab label="Culture" icon={<PeopleIcon />} to={"/category/" + categories.CULTURE_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Electronics" icon={<DevicesIcon />} to={"/category/" + categories.ElECTRONICS_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Fashion" icon={<StyleIcon />} to={"/category/" + categories.FASHION_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Food" icon={<RestaurantIcon />} to={"/category/" + categories.FOOD_CATEGORY_VALUE} component={Link}/>
+            <Tab label="For Home" icon={<HomeIcon />} to={"/category/" + categories.FOR_HOME_CATEGORY_VALUE} component={Link}/>
+            <Tab label="General" icon={<AppsIcon />} to={"/category/" + categories.GENERAL_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Gifts" icon={<CardGiftcardIcon />} to={"/category/" + categories.GIFTS_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Kids" icon={<FaceIcon />} to={"/category/" + categories.KIDS_CATEGORY_VALUE} component={Link}/>            
+            <Tab label="Office" icon={<ContactMailIcon />} to={"/category/" + categories.OFFICE_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Optic" icon={<RemoveRedEyeIcon />} to={"/category/" + categories.OPTIC_CATEGORY_VALUE} component={Link}/>            
+            <Tab label="Professionals" icon={<PersonOutlineIcon />} to={"/category/" + categories.PROFESSIONALS_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Sport" icon={<DirectionsRunIcon />} to={"/category/" + categories.SPORT_CATEGORY_VALUE} component={Link}/>
+            <Tab label="Tourism" icon={<FlightIcon />} to={"/category/" + categories.TOURISM_CATEGORY_VALUE} component={Link}/>
           </Tabs>
         </AppBar>
       </div>
