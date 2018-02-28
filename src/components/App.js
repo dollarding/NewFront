@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createMuiTheme } from 'material-ui/styles';
 import Header from './Header';
-import Routes from '../routes';
+import Routes from '../Routes';
 import AppLayout from './AppLayout';
-import CategoriesMenu from './containers/CategoriesMenu';
 import Footer from './Footer';
 
 // This is a class-based component because the current
@@ -16,32 +15,34 @@ import Footer from './Footer';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      light: '#80d6ff',
-      main: '#42a5f5',
-      dark: '#0077c2',
-      contrastText: '#f9f9f9',
+      light: '#8d8d8d',
+      main: '#606060',
+      dark: '#363636',
+      contrastText: '#ffffff',
     },
     secondary: {
-      light: '#c3fdff',
-      main: '#90caf9',
-      dark: '#5d99c6',
-      contrastText: '#424242',
+      light: '#5fd25e',
+      main: '#20a02f',
+      dark: '#007000',
+      contrastText: '#000000',
     },
   },
 });
 
-class App extends React.Component {
-  constructor(props){
-    super(props);
-  }
 
+const appStyle = {
+  overflow: 'hidden',
+  height: 663,
+  overflowY: 'auto'
+};
+
+class App extends React.Component {
   render() {
     return (
-      <div>
+      <div style={appStyle}>
         <MuiThemeProvider theme={theme}>
           <AppLayout>
           <Header/>
-          <CategoriesMenu history={history}/>
           <Routes/>
           <Footer/>
           </AppLayout>

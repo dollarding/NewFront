@@ -11,15 +11,15 @@ const styles = {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'space-around',
-        overflow: 'hidden',
         backgroundColor: '#e0e0e0',
-        height: '80%',
         padding: 4
     },
     gridList: {
-        height: 450,
+        maxWidth: '100%',
+        justifyContent: 'flex-end',
         width: '100%',
-        justifyContent: 'space-evenly'
+        overflowY: 'inherit',
+        height: '100%'
     },
     gridListTile :{
         hover: {

@@ -6,7 +6,6 @@ import benefitImage from '../../img/benefit.jpg';
 import BenefitCard from './BenefitCard';
 import Card from 'material-ui/Card';
 import CategoryHeader from '../CategoryHeader';
-import '../../styles/categorygridtile.css';
 
 
 const styles = theme => ({
@@ -16,22 +15,24 @@ const styles = theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-around',
-    overflow: 'hidden',
     maxWidth: '96%',
     minWidth: '96%',
     backgroundColor: '#f5f5f5',
-    padding: '15px',
-    margin: 10,
-    height: '50%'
+    margin: 4,
+    padding: 6
   },
   gridList: {
     flexWrap: 'nowrap',
-    height: '100%',
-    alignItems: 'stretch',
-    justifyContent: 'space-evenly',
+    height: '94%',
+    alignItems: 'center',
+    justifyContent: 'space-around',
     width: '100%',
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
+  },
+  gridTile: {
+    width: '16% !important',
+    height: '74% !important'
   },
   title: {
     color: theme.palette.primary.light,
@@ -68,7 +69,7 @@ function SingleLineGridList(props) {
       <CategoryHeader title={title} category={category}/>
       <GridList className={classes.gridList} cols={2.5}>
         {benefits.map(benefit => (
-          <GridListTile className="gridTile" key={benefit._id}>
+          <GridListTile className={classes.gridTile} key={benefit._id}>
             <img src={benefitImage} alt={benefit.CouponName} />
             <BenefitCard key={benefit._id} benefit={benefit}/>
             />

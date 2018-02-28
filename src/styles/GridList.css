@@ -3,11 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow-y: inherit;
     background-color: LightSteelBlue;
 }
 
 .gridList {
     max-width: 1500;
     height: 600;
-    overflow-Y: auto;
 }

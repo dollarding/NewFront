@@ -14,14 +14,13 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-end',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     width: '98%'
 
   },
   button: {
     margin: theme.spacing.unit,
     color: 'black',
-    backgroundColor: 'white'
   },
 });
 

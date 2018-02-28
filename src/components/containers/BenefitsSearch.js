@@ -4,7 +4,7 @@ import Autosuggest from 'react-autosuggest';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import compose from 'recompose/compose';
-import LocationButton from './LocationButton';
+//import LocationButton from './buttons/LocationButton';
 
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
@@ -12,6 +12,10 @@ import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
 import { MenuItem } from 'material-ui/Menu';
 import { withStyles } from 'material-ui/styles';
+//import IconButton from 'material-ui/IconButton';
+import LocationButton from '../../img/location.png';
+
+
 
 function renderInput(inputProps) {
   const { classes, ref, ...other } = inputProps;
@@ -68,15 +72,20 @@ const styles = theme => ({
         display:'flex',
         flexDirection: 'row',
         flexWrap:'nowrap',
-        justifyContent: 'flex-end',
-        width: '70%'
+        justifyContent: 'space-around',
+        width: '70%',
+        backgroundImage: 'url("../../img/searchBackground.png")',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'round'
     },
   container: {
     marginTop: '1%',
     paddingRight: '4%',
-    width: '31%',
+    width: '64%',
     height: '100%',
-    direction: 'RTL'
+    direction: 'RTL',
+    backgroundColor: 'white'
+
   },
   suggestionsContainerOpen: {
     position: 'absolute',
@@ -156,7 +165,7 @@ class BenfitsSearch extends React.Component {
 
     return (
         <div className={classes.root}>
-        <LocationButton/>
+        <img src={LocationButton}/>
         <Autosuggest
         theme={{
           container: classes.container,

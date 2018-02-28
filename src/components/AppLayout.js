@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class AppLayout extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
+class AppLayout extends React.Component {
     render () {
         return (
             <div>

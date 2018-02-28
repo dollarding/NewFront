@@ -5,6 +5,7 @@ import * as categories from '../../constants/categoriesTypes';
 
 import SingleLineCategory from './SingleLineCategory';
 
+
 const Categories = [
     {title:"תרבות", categoryType: categories.CULTURE_CATEGORY_VALUE},
     {title:"חשמל ומחשבים", categoryType: categories.ElECTRONICS_CATEGORY_VALUE},
@@ -31,17 +32,15 @@ const styles = {
         alignItems: 'center',
         alignContent: 'space-around',
         flexDirection: 'column',
-        overflow: 'hidden',
         backgroundColor: '#e0e0e0',
-        height: '100%',
         padding: 4
     },
     gridList: {
         maxWidth: '100%',
-        height: 447,
         justifyContent: 'center',
         width: '100%',
-        
+        overflowY: 'inherit',
+        height: '100%'
     }
 };
 
@@ -59,7 +58,6 @@ const Benefits = (props) =>{
             {Categories.map(category => 
                 <SingleLineCategory key={category.categoryType} title={category.title} category={category.categoryType} benefits={filterBenefitsByCategory(props.benefits, category)}/>
             )}
-
         </GridList>
 
     </div>

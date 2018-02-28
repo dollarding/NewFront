@@ -26,8 +26,6 @@ import PeopleIcon from 'material-ui-icons/People';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
-    height: '100%',
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
@@ -81,8 +79,7 @@ class CategoriesMenu extends React.Component {
 }
 
 CategoriesMenu.propTypes = {
-  classes: PropTypes.object.isRequired,
-  history: PropTypes.object
+  classes: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {

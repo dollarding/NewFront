@@ -20,7 +20,7 @@ class LocationButton extends React.Component {
     render() {
         return (
             <IconButton
-            iconClassName="material-icons"
+            iconclassname="material-icons"
             tooltip="סנן לפי מיקומך"
             onClick={this.filterByLocation}
           >

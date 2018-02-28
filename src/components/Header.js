@@ -4,7 +4,9 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
-import BenefitsSearch from './BenefitsSearch';
+import BenefitsSearch from './containers/BenefitsSearch';
+import CategoriesMenu from './containers/CategoriesMenu';
+import DollardingLogo from '../img/logo.png';
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.
@@ -18,31 +20,40 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-around',
     backgroundColor: 'SkyBlue',
-    zDepth: 2
+    zDepth: 2,
   },
   flex: {
     flex: 1,
   },
   appBar:{
     width: '100%',
-    height: '100%',
+    height: 400,
     display: 'flex',
-    flexWrap: 'nowrap',
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
+    backgroundImage: 'url("../img/HeaderBackground.png")',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'round'
+  },
+  upperHeader:{
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'center',
+    flex: 0.6,
+    alignItems: 'center'
   }
 };
 
 const Header = ({classes}) => (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            Dollarding
-          </Typography>
-        </Toolbar>
+        <div className={classes.upperHeader}>
+        <img src={DollardingLogo} />
         <BenefitsSearch />
+        </div>
+        <CategoriesMenu/>
       </AppBar>
+
     </div>
 );
 
