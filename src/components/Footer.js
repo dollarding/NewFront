@@ -17,7 +17,6 @@ const styles = {
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: 'SkyBlue',
     zDepth: 2,
   },
   flex: {
@@ -26,11 +25,14 @@ const styles = {
   },
   appBar:{
     width: '100%',
-    height: '100%',
+    height: 300,
     display: 'flex',
     flexWrap: 'nowrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundImage: 'url("../img/footer.png")',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'round'
   }
 };
 

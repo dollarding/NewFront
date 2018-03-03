@@ -79,8 +79,8 @@ const styles = theme => ({
         backgroundRepeat: 'round'
     },
   container: {
+    display: 'flex',
     marginTop: '1%',
-    paddingRight: '4%',
     width: '64%',
     height: '100%',
     direction: 'RTL',
@@ -89,10 +89,10 @@ const styles = theme => ({
   },
   suggestionsContainerOpen: {
     position: 'absolute',
-    marginTop: theme.spacing.unit,
+    marginTop: '2.23%',
+    width: '44.2%',
+    maxHeight: '29%',
     marginBottom: theme.spacing.unit * 3,
-    left: 0,
-    right: 0,
   },
   suggestion: {
     display: 'block',
@@ -102,6 +102,9 @@ const styles = theme => ({
     padding: 0,
     listStyleType: 'none',
   },
+  input: {
+    marginRight: '2%'
+  }
 });
 
 class BenfitsSearch extends React.Component {
@@ -122,7 +125,7 @@ class BenfitsSearch extends React.Component {
       ? []
       : this.props.benefits.filter(benefit => {
           const keep =
-            count < 5 && benefit.couponName.toLowerCase().slice(0, inputLength) === inputValue;
+            count < 4 && benefit.couponName.toLowerCase().slice(0, inputLength) === inputValue;
   
           if (keep) {
             count += 1;
