@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
 import BenefitsSearch from './containers/BenefitsSearch';
 import CategoriesMenu from './containers/CategoriesMenu';
 import DollardingLogo from '../img/logo.png';
+import Button from 'material-ui/Button';
+import {Link} from 'react-router-dom';
+
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.
@@ -41,6 +42,10 @@ const styles = {
     justifyContent:'center',
     flex: 0.6,
     alignItems: 'center'
+  },
+  button:{
+    height: '78%',
+    width: '18%',
   }
 };
 
@@ -48,7 +53,9 @@ const Header = ({classes}) => (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <div className={classes.upperHeader}>
+      <Button className={classes.button} component={Link} to={"/"}>        
         <img src={DollardingLogo} />
+        </Button>  
         <BenefitsSearch />
         </div>
         <CategoriesMenu/>

@@ -55,7 +55,7 @@ const Benefits = (props) =>{
 
     <div style={styles.root}>
         <GridList style={styles.gridList}>
-            {Categories.map(category => 
+            {Categories.slice(0,5).map(category => 
                 <SingleLineCategory key={category.categoryType} title={category.title} category={category.categoryType} benefits={filterBenefitsByCategory(props.benefits, category)}/>
             )}
         </GridList>

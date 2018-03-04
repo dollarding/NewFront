@@ -91,7 +91,7 @@ const styles = theme => ({
     position: 'absolute',
     marginTop: '2.23%',
     width: '44.2%',
-    maxHeight: '29%',
+    maxHeight: '32%',
     marginBottom: theme.spacing.unit * 3,
   },
   suggestion: {

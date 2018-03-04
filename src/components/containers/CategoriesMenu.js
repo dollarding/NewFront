@@ -4,32 +4,28 @@ import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';
 import { withStyles } from 'material-ui/styles';
-import AppBar from 'material-ui/AppBar';
-import Tabs, { Tab } from 'material-ui/Tabs';
 import * as categories from '../../constants/categoriesTypes';
+import Button from 'material-ui/Button';
 
-import HomeIcon from 'material-ui-icons/Home';
-import FaceIcon from 'material-ui-icons/Face';
-import CardGiftcardIcon from 'material-ui-icons/CardGiftcard';
-import DirectionsRunIcon from 'material-ui-icons/DirectionsRun';
-import ContactMailIcon from 'material-ui-icons/ContactMail';
-import DevicesIcon from 'material-ui-icons/Devices';
-import RestaurantIcon from 'material-ui-icons/Restaurant';
-import PublicIcon from 'material-ui-icons/Public';
-import PersonOutlineIcon from 'material-ui-icons/PersonOutline';
-import FlightIcon from 'material-ui-icons/Flight';
-import AppsIcon from 'material-ui-icons/Apps';
-import RemoveRedEyeIcon from 'material-ui-icons/RemoveRedEye';
-import StyleIcon from 'material-ui-icons/Style';
-import PeopleIcon from 'material-ui-icons/People';
-
-
-const styles = theme => ({
+const styles = {
   root: {
     width: '100%',
-    backgroundColor: theme.palette.background.paper,
+    backgroundImage: 'url("../../img/CategoriesBackground.png")',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'round',
+    display: 'flex',
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: '35%'
   },
-});
+  buttons:{
+    width: '72%'
+  },
+  button :{
+    height: 80
+  }
+};
 
 class CategoriesMenu extends React.Component {
   constructor(props){
@@ -48,31 +44,41 @@ class CategoriesMenu extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            scrollable
-            scrollButtons="auto"
-            indicatorColor="primary"
-            textColor="primary"
-          >
-            <Tab label="Everything" icon={<PublicIcon />} to={"/"} component={Link}/>
-            <Tab label="Culture" icon={<PeopleIcon />} to={"/category/" + categories.CULTURE_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Electronics" icon={<DevicesIcon />} to={"/category/" + categories.ElECTRONICS_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Fashion" icon={<StyleIcon />} to={"/category/" + categories.FASHION_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Food" icon={<RestaurantIcon />} to={"/category/" + categories.FOOD_CATEGORY_VALUE} component={Link}/>
-            <Tab label="For Home" icon={<HomeIcon />} to={"/category/" + categories.FOR_HOME_CATEGORY_VALUE} component={Link}/>
-            <Tab label="General" icon={<AppsIcon />} to={"/category/" + categories.GENERAL_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Gifts" icon={<CardGiftcardIcon />} to={"/category/" + categories.GIFTS_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Kids" icon={<FaceIcon />} to={"/category/" + categories.KIDS_CATEGORY_VALUE} component={Link}/>            
-            <Tab label="Office" icon={<ContactMailIcon />} to={"/category/" + categories.OFFICE_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Optic" icon={<RemoveRedEyeIcon />} to={"/category/" + categories.OPTIC_CATEGORY_VALUE} component={Link}/>            
-            <Tab label="Professionals" icon={<PersonOutlineIcon />} to={"/category/" + categories.PROFESSIONALS_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Sport" icon={<DirectionsRunIcon />} to={"/category/" + categories.SPORT_CATEGORY_VALUE} component={Link}/>
-            <Tab label="Tourism" icon={<FlightIcon />} to={"/category/" + categories.TOURISM_CATEGORY_VALUE} component={Link}/>
-          </Tabs>
-        </AppBar>
+        {/* {"/category/" + categories.FASHION_CATEGORY_VALUE} */}
+        {/* {"/category/" + categories.GENERAL_CATEGORY_VALUE} */}
+        {/* {"/category/" + categories.GIFTS_CATEGORY_VALUE} */}
+        <div className={classes.buttons}>
+        <Button  size="small" component={Link} to={"/category/" + categories.FOOD_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/מסעדות.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.OPTIC_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/ספא.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.CULTURE_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/פנאי.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.TOURISM_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/תיירות.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.PROFESSIONALS_CATEGORY_VALUE}>
+          <img className={classes.button}src="../../img/categories/הופעות.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.OFFICE_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/חיות.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.ElECTRONICS_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/חשמל.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.KIDS_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/ילדים.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.SPORT_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/כושר.png"/>
+          </Button>
+          <Button component={Link} to={"/category/" + categories.FOR_HOME_CATEGORY_VALUE}>
+          <img className={classes.button} src="../../img/categories/לבית.png"/>
+          </Button>
+          </div>
       </div>
     );
   }
