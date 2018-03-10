@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createMuiTheme } from 'material-ui/styles';
 import Header from './Header';
-import Routes from '../Routes';
+import Routes from '../routes';
 import AppLayout from './AppLayout';
 import Footer from './Footer';
 
@@ -24,7 +24,7 @@ const theme = createMuiTheme({
       light: '#5fd25e',
       main: '#20a02f',
       dark: '#007000',
-      contrastText: '#000000',
+      contrastText: '#ffffff',
     },
   },
 });

@@ -44,8 +44,8 @@ const styles = {
     alignItems: 'center'
   },
   button:{
-    height: '78%',
-    width: '18%',
+    width: '14.5%',
+    height: '49%'
   }
 };
 

@@ -10,10 +10,11 @@ import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
+import Button from 'material-ui/Button';
+import LocationOn from 'material-ui-icons/LocationOn';
 import { MenuItem } from 'material-ui/Menu';
 import { withStyles } from 'material-ui/styles';
 //import IconButton from 'material-ui/IconButton';
-import LocationButton from '../../img/location.png';
 
 
 
@@ -74,15 +75,16 @@ const styles = theme => ({
         flexWrap:'nowrap',
         justifyContent: 'space-around',
         width: '70%',
+        height: '48.1%',
+        alignItems: 'center',
         backgroundImage: 'url("../../img/searchBackground.png")',
         backgroundSize: 'cover',
         backgroundRepeat: 'round'
     },
   container: {
     display: 'flex',
-    marginTop: '1%',
+    height: '43%',
     width: '64%',
-    height: '100%',
     direction: 'RTL',
     backgroundColor: 'white'
 
@@ -104,6 +106,15 @@ const styles = theme => ({
   },
   input: {
     marginRight: '2%'
+  },
+  button: {
+    width: '17%',
+    height: '50%',
+    backgroundColor: '#199147',
+    marginLeft: '12%'
+  },
+  leftIcon: {
+    marginRight: theme.spacing.unit,
   }
 });
 
@@ -168,7 +179,10 @@ class BenfitsSearch extends React.Component {
 
     return (
         <div className={classes.root}>
-        <img src={LocationButton}/>
+        <Button className={classes.button} variant="raised" color="secondary">
+        <LocationOn className={classes.leftIcon}/>
+        חפש לפי מיקום
+      </Button>
         <Autosuggest
         theme={{
           container: classes.container,
