@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 32" width="18" height="32">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.259   0 0 0 0 0.404   0 0 0 0 0.698   0 0 0 1 0" /> </filter>
+		<image width="36" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQXMSjYYpk8AAABYElEQVRo3u2YO07EMBCGvyAIHICHaKGhRNvRULES2grBBahBWyEuADVX4AY0HAHBcgUahFgkHiUCrWARMR1F2NjxeFakmN+dJ57/8zNxMtKVscom6ywyzyxTpegVG3wouFRomi4POG/pjM9+m37A3OHYGo95xhFFDfsAwKQY4JRdjX5MCNvt69hL1WJYa/BrTIFsBI7/bDaxJAAtzY0lAejq2csA2poA8VqJWH4OxzfLvnTx58CaN/rKOfc8UfzWXHOrC7DgifXY4TkuXfwamPPEDmPtdQE+6UVnEwDklZHo3ssAqiX67NAEEMkADMCvGS4jT/5yGXCQAtBJtHc4+ilTkJOuQI5/XwMGYAAG0HCAomaWhBx+gAsekwHO/OEs0DxnqVRzUnkzvBsRGYTeBaF7wZCbUs1bxLM11PBFaAAGYAAGYAAGYAAGYAAGYACNBPgSRFTV5mXk77h39iTpfgA1ydhpwa17aAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMi0yMFQyMzo0OTo0MCswMTowME8sdk0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDItMjBUMjM6NDk6NDArMDE6MDA+cc7xAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="facebook-logo" style="filter: url(#flt1)" href="#img1" transform="matrix(0.5,0,0,0.5,-7,0)"/>
+</svg>

@@ -47,7 +47,7 @@ const ContactUs = ({classes}) => (
         <div className={classes.contactUsContainer}>
         <h1 className={classes.textStyle}>הרשמה לקבלת הטבות</h1>
         <div className={classes.contactUs}>
-        <Button className={classes.button} variant="raised" color="secondary">
+        <Button className={classes.button} variant="raised" color="primary">
         <Send className={classes.leftIcon}/>
           שלח
         </Button>

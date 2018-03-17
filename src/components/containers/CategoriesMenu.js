@@ -20,7 +20,10 @@ const styles = {
     height: '35%'
   },
   buttons:{
-    width: '72%'
+    width: '78%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   },
   button :{
     height: 80

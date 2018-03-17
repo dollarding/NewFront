@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import BenefitCard from '../benefits/BenefitCard';
+import { withStyles } from 'material-ui/styles';
 import GridList, { GridListTile } from 'material-ui/GridList';
-import benefitImage from '../../img/benefit.jpg';
+import compose from 'recompose/compose';
+
 
 //TODO: add componentWillReceiveProps
 const styles = {
@@ -19,12 +21,13 @@ const styles = {
         justifyContent: 'flex-end',
         width: '100%',
         overflowY: 'inherit',
-        height: '100%'
+        height: '100%',
+        padding: 4
     },
     gridListTile :{
-        hover: {
-            margin: '12px 12px 12px 12px'
-        }
+        padding: '4px !important;',
+        height: '240px !important;',
+        width: '16.6667%  !important;'
     } 
 };
 
@@ -55,19 +58,19 @@ class CategoryPage extends React.Component {
     }
 
     render() {
+        const {classes} = this.props;
         return (
-        <div style={styles.root}>
+        <div className={classes.root}>
             <GridList
             cols = {6}
             cellHeight={200}
             padding={6}
-            style={styles.gridList}
+            className={classes.gridList}
             >
                 {this.state.categoryList.map(benefit =>(
-                    <GridListTile style={styles.gridListTile}
+                    <GridListTile className={classes.gridListTile}
                     key={benefit._id}
                     >
-                        <img src={benefitImage} alt={benefit.CouponName}/>
                         <BenefitCard key={benefit._id} benefit={benefit}/>
                     </GridListTile>
                 ))}
@@ -83,7 +86,8 @@ CategoryPage.propTypes = {
       params: PropTypes.shape( {
         id: PropTypes.string
       })
-    })
+    }),
+    classes: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
@@ -92,4 +96,6 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps,)(CategoryPage);
+export default compose(
+    withStyles(styles, { name: 'CategoryPage' }),
+connect(mapStateToProps,))(CategoryPage);

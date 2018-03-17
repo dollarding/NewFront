@@ -179,7 +179,7 @@ class BenfitsSearch extends React.Component {
 
     return (
         <div className={classes.root}>
-        <Button className={classes.button} variant="raised" color="secondary">
+        <Button className={classes.button} variant="raised" color="primary">
         <LocationOn className={classes.leftIcon}/>
         חפש לפי מיקום
       </Button>
@@ -212,7 +212,10 @@ class BenfitsSearch extends React.Component {
 
 BenfitsSearch.propTypes = {
   classes: PropTypes.object.isRequired,
-  benefits: PropTypes.array.isRequired
+  benefits: PropTypes.array.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func
+  })
 };
 
 export default compose(
@@ -226,3 +229,5 @@ function mapStateToProps(state) {
       benefits: state.benefits
     };
   }
+
+

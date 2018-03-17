@@ -13,7 +13,7 @@ class LocationButton extends React.Component {
         };
     }
     
-    filterByLocation = (event) => {
+    filterByLocation = () => {
 
     };
 

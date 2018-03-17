@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import GridList, { GridListTile } from 'material-ui/GridList';
-import benefitImage from '../../img/benefit.jpg';
 import BenefitCard from './BenefitCard';
 import Card from 'material-ui/Card';
 import CategoryHeader from '../CategoryHeader';
@@ -13,6 +12,7 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'nowrap',
     flexDirection: 'column',
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'space-around',
     maxWidth: '96%',
@@ -23,7 +23,7 @@ const styles = theme => ({
   },
   gridList: {
     flexWrap: 'nowrap',
-    height: '94%',
+    height: '72%',
     alignItems: 'center',
     justifyContent: 'space-around',
     width: '100%',
@@ -32,7 +32,7 @@ const styles = theme => ({
   },
   gridTile: {
     width: '16% !important',
-    height: '74% !important'
+    height: '100% !important'
   },
   title: {
     color: theme.palette.primary.light,
@@ -70,9 +70,7 @@ function SingleLineGridList(props) {
       <GridList className={classes.gridList} cols={2.5}>
         {benefits.map(benefit => (
           <GridListTile className={classes.gridTile} key={benefit._id}>
-            <img src={benefitImage} alt={benefit.CouponName} />
             <BenefitCard key={benefit._id} benefit={benefit}/>
-            />
           </GridListTile>
         ))}
       </GridList>

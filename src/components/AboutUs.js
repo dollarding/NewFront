@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
-import IconButton from 'material-ui/IconButton';
-import PlayStore from '../svg/play-store.svg';
-import AppStore from '../svg/app-store.svg';
+import AppStoreIcon from '../svg/app-store.svg';
+import PlayStoreIcon from '../svg/play-store.svg';
 
-const styles = {
+const styles = theme => ({
     aboutUsContainer:{
         marginTop: "3%",
         display: 'flex',
@@ -23,11 +22,19 @@ const styles = {
       link:{
         direction: 'rtl',
         color: 'white'
-      },   
-      button:{
-        width: '65%'
-  }
-};
+      },
+      button: {
+        height: 48,
+        width: 220,
+        backgroundColor: '#199147'
+      },
+      leftIcon: {
+        marginRight: theme.spacing.unit*2,
+        width: 22,
+        height: 30,
+        color: 'white'
+      }
+});
 
 
 const AboutUs = ({classes}) => {
@@ -37,10 +44,10 @@ const AboutUs = ({classes}) => {
         <h1 className={classes.textStyle}>חברה</h1>
         <a className={classes.link} href="http:\\google.com">אודות</a>
         <a className={classes.link} href="">תקנון</a>
-        <Button size="small" >
+        <Button className={classes.button} variant="raised" color="primary">
+        <img src={PlayStoreIcon} className={classes.leftIcon}/>
+        <img src={AppStoreIcon} className={classes.leftIcon}/>
         הורדת אפליקציה
-        {/* <img  className={classes.button} src="../../img/store.png"/> */}
-
         </Button>
       </div>
     );

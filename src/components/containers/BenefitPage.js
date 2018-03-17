@@ -2,45 +2,49 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
+import { withStyles } from 'material-ui/styles';
+import { Link } from 'react-router-dom';
+import Button from 'material-ui/Button';
+import benefitImage from '../../img/benefit.jpg';
+import compose from 'recompose/compose';
+
 import * as benefitActions from '../../actions/benefitsActions';
 
 const styles = {
     root: {
         display: 'flex',
+        alignItems:'center',
+        flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        overflow: 'hidden',
-        backgroundColor: 'LightSteelBlue',
-        height: 445,
-        padding: 4
+        height: '100%',
+        minHeight: 550,
+        justifyContent: 'space-around'
+    },
+    image: {
+        height: 380,
+        width: 460
     }
 };
 
-class DetailedBenefit extends React.Component {
-    constructor(props, context) {
-        super(props, context);
-
-        this.state = {
-            benefit: Object.assign({}, this.props.benefit),
-        };
-    }
-
+class BenefitPage extends React.Component { 
     // componentWillReceiveProps(nextProps){
     //     this.setState({benefit: getBenefitById(this.props.benefits)})
     // }
 
     render() {
+        const {classes, benefit} = this.props;
         return (
-            <div style={styles.root}>
-                <h1>Im Detailed Benefit</h1>
-                <h2>{this.state.benefit.couponName}</h2>
-            </div>
+            <div className={classes.root}>
+            <h1>{benefit.couponName}</h1>
+            <img className={classes.image} src={benefitImage} />
+          </div>
         );
     }
 }
 
-DetailedBenefit.propTypes = {
-    benefit: PropTypes.object.isRequired
+BenefitPage.propTypes = {
+    benefit: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
 };
 
 function getBenefitById(benefits, id){
@@ -65,4 +69,6 @@ function mapDispatchToProps(dispatch){
         actions : bindActionCreators(benefitActions, dispatch)
     };
 }
-export default connect(mapStateToProps, mapDispatchToProps)(DetailedBenefit);
+export default compose(
+    withStyles(styles, { name: 'BenfeitPage' }),
+    connect(mapStateToProps, mapDispatchToProps))(BenefitPage);
