@@ -32,6 +32,7 @@ const styles = theme => ({
         marginRight: theme.spacing.unit*2,
         width: 22,
         height: 30,
+        fill: 'white',
         color: 'white'
       }
 });

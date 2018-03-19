@@ -3,7 +3,7 @@ import React from 'react';
 import { Redirect, Switch, Route } from 'react-router-dom';
 import HomePage from './components/containers/HomePage';
 import Terms from './components/Terms';
-import BenefitPage from './components/containers/BenefitPage';
+import BenefitPage from './components/benefits/BenefitPage';
 import CategoryPage from './components/containers/CategoryPage';
 
 

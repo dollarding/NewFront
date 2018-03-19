@@ -3,28 +3,50 @@ import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import { withStyles } from 'material-ui/styles';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Button from 'material-ui/Button';
 import benefitImage from '../../img/benefit.jpg';
 import compose from 'recompose/compose';
 
+import BenefitPageDescription from '../containers/BenefitPageDescription';
 import * as benefitActions from '../../actions/benefitsActions';
+import FacebookLogo from '../../svg/facebook-logo.svg';
+import WhatsAppLogo from '../../svg/whatsapp-logo.svg';
 
-const styles = {
+const styles = theme => ({
     root: {
         display: 'flex',
-        alignItems:'center',
+        marginTop: '8%',
+        alignItems:'flex-start',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        height: '100%',
-        minHeight: 550,
+        width: '100%',
+        height: '80%',
+        minHeight: 470,
         justifyContent: 'space-around'
     },
     image: {
-        height: 380,
-        width: 460
-    }
-};
+        width: '100%'
+    },
+    benefitImage:{
+        display: 'flex',
+        alignItems:'center',
+        flexDirection: 'column',
+        width: '40%',
+        justifyContent: 'space-between'
+    },
+      leftIcon: {
+        marginLeft: theme.spacing.unit*2
+      },
+      shareButtons:{
+        display: 'flex',
+        alignItems:'center',
+        width: '70%',
+        marginTop: 20,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+});
 
 class BenefitPage extends React.Component { 
     // componentWillReceiveProps(nextProps){
@@ -35,8 +57,20 @@ class BenefitPage extends React.Component {
         const {classes, benefit} = this.props;
         return (
             <div className={classes.root}>
-            <h1>{benefit.couponName}</h1>
+            <BenefitPageDescription benefit={benefit}/>
+            <div className={classes.benefitImage}>
             <img className={classes.image} src={benefitImage} />
+            <div className={classes.shareButtons}>
+            <Button className={classes.button} variant="raised" color="primary">
+            שתפו דרך פייסבוק
+        <img src={FacebookLogo} className={classes.leftIcon}/>
+        </Button>
+        <Button className={classes.button} variant="raised" color="primary">
+        שתפו דרך ווצאפ
+        <img src={WhatsAppLogo} className={classes.leftIcon}/>
+        </Button>
+            </div>
+            </div>
           </div>
         );
     }
