@@ -1,4 +1,4 @@
-import {LOAD_BENEFITS_SUCCESS} from '../constants/actionTypes';
+import {LOAD_BENEFITS_SUCCESS } from '../constants/actionTypes';
 import initialState from './initialState';
 
 export default function benefitsReducer(state = initialState.benefits, action) {
@@ -9,3 +9,5 @@ export default function benefitsReducer(state = initialState.benefits, action) {
             return state;
     }
 }
+
+

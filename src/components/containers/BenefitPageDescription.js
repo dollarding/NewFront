@@ -12,12 +12,16 @@ const styles = {
         flexDirection: 'column',
         flexWrap: 'wrap',
         height: '100%',
-        width: '40%',
+        width: '45%',
         justifyContent: 'space-around',
         direction: 'rtl'
     },
     title:{
         fontSize: '-webkit-xxx-large'
+    },
+    businessDescription: {
+        display: 'flex',
+        flexDirection: 'column',
     },
     cell: {
         display: 'flex',
@@ -30,24 +34,29 @@ const styles = {
     button:{
         backgroundColor:"#199147",
         width: '50%',
-        color: 'white'
+        color: 'white',
+        '&:hover': {
+            background: '#1bc15b'
+          }
       }
 };
 
-const BenefitPageDescription = ({classes, benefit}) =>{
+const BenefitPageDescription = ({classes, benefit, buttonTitle, onBenefitClick}) =>{
     return (
     <div className={classes.root}>
         <h1>{benefit.couponName}</h1>
         <p>{benefit.couponDescription}</p>
         <p>{benefit.MarketingStatement}</p>
+        <div className={classes.businessDescription}>
         <div className={classes.cell}>
         <b><font className={classes.title} color="#199147" size="3">&#8362;{benefit.cellPrice}</font></b>
         <font color="grey" size="2"><del>&#8362;{benefit.tariff}</del></font>
-        <Button color="primary" className={classes.button}>
-          לחצו למימוש להטבה
-          </Button>
+        <Button onClick={onBenefitClick} color="primary" className={classes.button}>
+          {buttonTitle}
+        </Button>
         </div>
-        <BenefitTabs/>
+        <BenefitTabs benefit={benefit}/>
+        </div>
         <p><font size="1">{benefit.smallLetters}</font></p>
     </div>
     );
@@ -55,8 +64,10 @@ const BenefitPageDescription = ({classes, benefit}) =>{
 
 
 BenefitPageDescription.propTypes = {
-    classes: PropTypes.array.isRequired,
-    benefit: PropTypes.array.isRequired
+    classes: PropTypes.object.isRequired,
+    benefit: PropTypes.object.isRequired,
+    buttonTitle: PropTypes.string.isRequired,
+    onBenefitClick: PropTypes.func.isRequired
 };
 
 export default withStyles(styles)(BenefitPageDescription);

@@ -12,7 +12,8 @@ const styles = {
         width: '15%',
         justifySelf: 'flex-end',
         height: '45%',
-        alignSelf: 'center'
+        alignSelf: 'center',
+        //minWidth: 250
       },
       textStyle: {
         direction: 'rtl',
@@ -24,22 +25,31 @@ const styles = {
         justifyContent: 'space-around',
       },
       button: {
-        height: 48,
-        width: 48
+        //minWidth: 40,
+        height: 51,
+        width: 51,
+        backgroundColor:"#3e3e3e",
+        color: 'white',
+        '&:hover': {
+            background: "#727272"
+          }
       },
+      img: {
+        marginTop: -15
+      }
 };
 
 
 const FollowUs = ({classes}) => {
-    const imgs = ["../../img/instagram.png","../../img/twitter.png","../../img/facebook.png"];
+    const imgs = ["../../img/instagram.png", "../../img/twitter.png", "../../img/facebook.png"];
     
     return(
     <div className={classes.followUsContainer}>
     <h1 className={classes.textStyle}>עקבו אחרינו</h1>
     <div className={classes.buttons}>
-        {imgs.map(img => 
-        (<Button key={img} className={classes.button} size="small" >
-        <img className={classes.button} src={img}/>
+        {imgs.map(mySvg => 
+        (<Button className={classes.button} key={mySvg} variant="fab" size="small" >
+        <img className={classes.img} src={mySvg}/>
         </Button>)
         )}
       

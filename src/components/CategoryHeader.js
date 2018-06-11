@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom';
 import Button from 'material-ui/Button';
+import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -20,14 +21,14 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
-    color: 'black',
+    color: '#199147',
   },
 });
 
-const CategoryHeader = ({classes, title, category}) => (
+const CategoryHeader = ({classes, title}) => (
     <div className={classes.root}>
-        <Button color="primary" className={classes.button} component={Link} to={"/category/" + category}>
-        ראה עוד
+        <Button color="primary" className={classes.button} component={Link} to={"/category/" + title}>
+         <KeyboardArrowLeft/> ראה עוד
         </Button>
         <h1>{title}</h1>
     </div>
@@ -36,7 +37,7 @@ const CategoryHeader = ({classes, title, category}) => (
 CategoryHeader.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
+    //category: PropTypes.string.isRequired,
     
 };
 

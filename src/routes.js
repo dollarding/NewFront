@@ -4,6 +4,7 @@ import { Redirect, Switch, Route } from 'react-router-dom';
 import HomePage from './components/containers/HomePage';
 import Terms from './components/Terms';
 import BenefitPage from './components/benefits/BenefitPage';
+import FinalBenefitPage from './components/benefits/FinalBenefitPage';
 import CategoryPage from './components/containers/CategoryPage';
 
 
@@ -13,6 +14,7 @@ const Routes = () => {
         <Switch>
             <Route path="/terms" component={Terms} />
             <Route path="/benefit/:id" component={BenefitPage}/>
+            <Route path="/shared/:id" component={FinalBenefitPage}/>
             <Route exact path="/category/:id" component={CategoryPage} />
             <Route exact path="/" component={HomePage} />
             <Redirect path="*" to="/"/>

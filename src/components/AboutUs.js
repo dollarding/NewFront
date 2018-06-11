@@ -26,10 +26,13 @@ const styles = theme => ({
       button: {
         height: 48,
         width: 220,
-        backgroundColor: '#199147'
+        backgroundColor: '#199147',
+        '&:hover': {
+            background: '#1bc15b'
+          }
       },
-      leftIcon: {
-        marginRight: theme.spacing.unit*2,
+      rightIcon: {
+        marginLeft: theme.spacing.unit*2,
         width: 22,
         height: 30,
         fill: 'white',
@@ -46,9 +49,9 @@ const AboutUs = ({classes}) => {
         <a className={classes.link} href="http:\\google.com">אודות</a>
         <a className={classes.link} href="">תקנון</a>
         <Button className={classes.button} variant="raised" color="primary">
-        <img src={PlayStoreIcon} className={classes.leftIcon}/>
-        <img src={AppStoreIcon} className={classes.leftIcon}/>
         הורדת אפליקציה
+        <img src={PlayStoreIcon} className={classes.rightIcon}/>
+        <img src={AppStoreIcon} className={classes.rightIcon}/>
         </Button>
       </div>
     );

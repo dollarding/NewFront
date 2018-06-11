@@ -41,7 +41,7 @@ class FullWidthTabs extends React.Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, benefit } = this.props;
 
     return (
       <div className={classes.root}>
@@ -64,7 +64,11 @@ class FullWidthTabs extends React.Component {
           onChangeIndex={this.handleChangeIndex}
         >
           <TabContainer dir={'rtl'}>פרטי עסק</TabContainer>
-          <TabContainer dir={'rtl'}>שעות פעילות</TabContainer>
+          <TabContainer dir={'rtl'}>
+          ימי עבודה: {benefit.workTime.workdays}
+          <br/>
+          שעות פעילות: {benefit.workTime.workdaysHoursTo} - {benefit.workTime.workdaysHoursFrom}
+          </TabContainer>
           <TabContainer dir={'rtl'}>מפת הגעה</TabContainer>
 
         </SwipeableViews>
@@ -76,6 +80,7 @@ class FullWidthTabs extends React.Component {
 FullWidthTabs.propTypes = {
   classes: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
+  benefit: PropTypes.object.isRequired
 };
 
 export default withStyles(styles, { withTheme: true })(FullWidthTabs);

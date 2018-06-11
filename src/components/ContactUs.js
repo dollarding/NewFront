@@ -31,10 +31,13 @@ const styles = theme => ({
   button: {
     height: 48,
     width: 48,
-    backgroundColor: '#199147'
+    backgroundColor: '#199147',
+    '&:hover': {
+        background: '#1bc15b'
+      }
   },
-  leftIcon: {
-    marginRight: theme.spacing.unit,
+  rightIcon: {
+    marginLeft: theme.spacing.unit,
   },
   input:{
     direction: 'rtl',
@@ -48,11 +51,11 @@ const ContactUs = ({classes}) => (
         <h1 className={classes.textStyle}>הרשמה לקבלת הטבות</h1>
         <div className={classes.contactUs}>
         <Button className={classes.button} variant="raised" color="primary">
-        <Send className={classes.leftIcon}/>
           שלח
+          <Send className={classes.rightIcon}/>
         </Button>
         <Input
-          placeholder='הזינו דו"אל'
+          placeholder="הזינו כתובת מייל"
           inputProps={{
             'aria-label': 'Description',
           }}

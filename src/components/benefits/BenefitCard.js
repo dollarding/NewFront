@@ -15,7 +15,7 @@ const styles = {
       flexDirection: 'column',
       flexWrap: 'wrap',
       height: '99%',
-      justifyContent: 'space-around',
+      justifyContent: 'space-around'
   },
   image: {
     width: '100%',
@@ -52,7 +52,10 @@ const styles = {
   button:{
     backgroundColor:"#199147",
     width: '80%',
-    color: 'white'
+    color: 'white',
+        '&:hover': {
+            background: '#1bc15b'
+          }
   }
 };
   

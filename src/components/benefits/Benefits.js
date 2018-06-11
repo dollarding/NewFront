@@ -32,15 +32,17 @@ const styles = {
         alignItems: 'center',
         alignContent: 'space-around',
         flexDirection: 'column',
-        backgroundColor: '#e0e0e0',
+        backgroundColor: '#dee1e3',
         padding: 4
-    },
+        },
     gridList: {
         maxWidth: '100%',
         justifyContent: 'center',
         width: '100%',
         overflowY: 'inherit',
-        height: '100%'
+        height: '100%',
+        padding: 16      
+        
     }
 };
 
@@ -55,8 +57,8 @@ const Benefits = (props) =>{
 
     <div style={styles.root}>
         <GridList style={styles.gridList}>
-            {Categories.slice(0,5).map(category => 
-                <SingleLineCategory key={category.categoryType} title={category.title} category={category.categoryType} benefits={filterBenefitsByCategory(props.benefits, category)}/>
+            {Categories.map(category => 
+                <SingleLineCategory key={category.categoryType} title={category.title} benefits={filterBenefitsByCategory(props.benefits, category)}/>
             )}
         </GridList>
 

@@ -17,7 +17,7 @@ const styles = theme => ({
     justifyContent: 'space-around',
     maxWidth: '96%',
     minWidth: '96%',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'white',
     margin: 4,
     padding: 6
   },
@@ -31,8 +31,14 @@ const styles = theme => ({
     transform: 'translateZ(0)',
   },
   gridTile: {
-    width: '16% !important',
-    height: '100% !important'
+    width: '17% !important',
+    height: '99% !important',
+    border: '1px solid #00000057',
+    '&:hover': {
+      height: '100% !important',
+      width: '17.5% !important',
+      borderColor:'#1bc15b'
+    }, 
   },
   title: {
     color: theme.palette.primary.light,
@@ -62,11 +68,11 @@ const styles = theme => ({
  */
 function SingleLineGridList(props) {
   const { classes } = props;
-  const { benefits, title, category } = props;
+  const { benefits, title} = props;
 
   return (
     <Card className={classes.root}>
-      <CategoryHeader title={title} category={category}/>
+      <CategoryHeader title={title}/>
       <GridList className={classes.gridList} cols={2.5}>
         {benefits.map(benefit => (
           <GridListTile className={classes.gridTile} key={benefit._id}>
@@ -82,7 +88,7 @@ SingleLineGridList.propTypes = {
   classes: PropTypes.object.isRequired,
   benefits: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired
+  //category: PropTypes.string.isRequired
 };
 
 export default withStyles(styles)(SingleLineGridList);

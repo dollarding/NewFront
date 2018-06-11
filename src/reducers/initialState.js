@@ -1,3 +1,4 @@
 export default {
-  benefits: []
+  benefits: [],
+  smsSent: false
 };

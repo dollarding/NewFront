@@ -27,6 +27,16 @@ const styles = {
   },
   button :{
     height: 80
+  },
+  fabButton:{
+    //minWidth: 40,
+    //height: 51,
+    //width: 51,
+    backgroundColor:"#3e3e3e",
+    color: 'white',
+    '&:hover': {
+        background: "#727272"
+      }
   }
 };
 
@@ -51,34 +61,34 @@ class CategoriesMenu extends React.Component {
         {/* {"/category/" + categories.GENERAL_CATEGORY_VALUE} */}
         {/* {"/category/" + categories.GIFTS_CATEGORY_VALUE} */}
         <div className={classes.buttons}>
-        <Button  size="small" component={Link} to={"/category/" + categories.FOOD_CATEGORY_VALUE}>
+        <Button size="small" component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.FOOD_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/מסעדות.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.OPTIC_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.OPTIC_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/ספא.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.CULTURE_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.CULTURE_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/פנאי.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.TOURISM_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.TOURISM_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/תיירות.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.PROFESSIONALS_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.PROFESSIONALS_CATEGORY_VALUE]}>
           <img className={classes.button}src="../../img/categories/הופעות.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.OFFICE_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.OFFICE_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/חיות.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.ElECTRONICS_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.ElECTRONICS_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/חשמל.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.KIDS_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.KIDS_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/ילדים.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.SPORT_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.SPORT_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/כושר.png"/>
           </Button>
-          <Button component={Link} to={"/category/" + categories.FOR_HOME_CATEGORY_VALUE}>
+          <Button component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.FOR_HOME_CATEGORY_VALUE]}>
           <img className={classes.button} src="../../img/categories/לבית.png"/>
           </Button>
           </div>

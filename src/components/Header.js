@@ -53,7 +53,7 @@ const Header = ({classes}) => (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <div className={classes.upperHeader}>
-      <Button className={classes.button} component={Link} to={"/"}>        
+      <Button disableRipple={true} className={classes.button} component={Link} to={"/"}>        
         <img src={DollardingLogo} />
         </Button>  
         <BenefitsSearch />

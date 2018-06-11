@@ -110,8 +110,12 @@ const styles = theme => ({
   button: {
     width: '17%',
     height: '50%',
+    //minWidth: 148,
     backgroundColor: '#199147',
-    marginLeft: '12%'
+    marginLeft: '12%',
+    '&:hover': {
+        background: '#1bc15b'
+      }
   },
   leftIcon: {
     marginRight: theme.spacing.unit,
@@ -136,7 +140,7 @@ class BenfitsSearch extends React.Component {
       ? []
       : this.props.benefits.filter(benefit => {
           const keep =
-            count < 4 && benefit.couponName.toLowerCase().slice(0, inputLength) === inputValue;
+            count < 4 && benefit.couponName.toLowerCase().includes(inputValue);
   
           if (keep) {
             count += 1;
