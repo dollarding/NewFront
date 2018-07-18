@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 90" width="91" height="90">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQUMgm9YGT4AAACT0lEQVRo3u2YvW/TQBjGf0lNWkCoUAtRqQ0gMVRicTq3M1OktoqExFyGDv0LEGLif+hKJyaGSAyIkYmt9lCkDgz0I4pE0kAjQEmEjwFxOM75C842on5uOb/3+n2e873ne20oUOC8o6SwNXiqtP8tBI95Ee22wRCRUhuyEUW/liL9Twlr4QL2UqUXCPbGCcsxckIvfAxGoKPLkUba6sRUIwV85LZGAW1uqAfKyeLohxHTr8oDLKpc4YQPvOQ1330eU9yjzi0W6HOEw/M/W0JbZmtb2mbYxfXl8jGrY/etcuzzcNllRo63pd1OLqCp3E4DlqXHMgOlTzNaQHQOzFNX2itsyv4mFaVPnfmo8HEEBPksKnr+6BoEpIzcBcTdhgCHOBzQpcspXU5pyZGHPGEOkzlMTJawuKlPQJ9n2Dg49AJ9OnR8lmtYWNToJ30iqm2oA4HbMO4SXOYuJlcVDT4pWpd3fIkTOFzAAjVqWNS4E5Ku6mPG5T02DjY2J/Ef1e8lGNHRVoR0GCVfAgMzvu4IhETK/T1Q9l3Nps44Gzbp7dRLUoFgO4h+kbNMBJwFHV7NTOjH6wQPGpnRCwSNydRoZSqg5U/3nUzpBYIdL/3KRNGZfnNZ+UVfYT9zeoFgnwpMAY+4n/rrR4XrjHhTYgmH6VwEwADLoM6rnOiBgJK/QJYo8TZvASJfAf9YRXQeBRh89lxd4JLsf2OokafCRdn/yijIbd1zVGxpneiWJ/K6dyD3JSgEFAJyFzD+ddznQPZ7SUOFoueJnPi3TYEC/zd+AEh2HzH3efXTAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAyLTIwVDIwOjUwOjA5KzAxOjAw3q+loAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMi0yMFQyMDo1MDowOSswMTowMK/yHRwAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 10">
+		<path id="Ellipse 22" class="shp0" d="M7,45c0,20.99 17.01,38 38,38c20.99,0 38,-17.01 38,-38c0,-20.99 -17.01,-38 -38,-38c-20.99,0 -38,17.01 -38,38z" />
+		<use id="double-king-size-bed" style="filter: url(#flt1)" href="#img1" transform="matrix(0.656,0,0,0.656,24,24)"/>
+	</g>
+</svg>

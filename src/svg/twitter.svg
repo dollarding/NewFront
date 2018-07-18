@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 68" width="68" height="68">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQXMS9GBgyfAAADLUlEQVRo3u2ZTUgUYRjHf9O6JiWobOShzfKQUWRkhUGEdogOZmmRBh0yjL6gIuyLPg7WqYioIDKhcx/aQTyEBqKBUIKVXxDaIXL9XnHV0sXMnQ7r6uw6uzvzzuxe9HlOO/PO8/89z/vMvDPvwpIt2WI3yeR4Ng6QQxprSGCAPr5QSSOe6CRjpZRp5AXuoEgl0R08I055INugfDpfVcR93kSqYuwe3iNzRnl5PGM8FhaXuMlUCHkZmUEyiSePcrqRkekkRhniPDKyMMK5MOJed/tBFviHaJ49LIKQym9NAEp/4t8VEu65U3oRJOp1is9wGQArhzjpDWIPoFumA+CCTnk3hWzhBC8YpotEb5CsgEGNbNQob2FIJ8DoXLXH2ewLs1eF8wYWDQBZOuWVE5E/H2a96pBm0sMC3BeUnyBPGSaGf6rD/lKKNSTAGyH5fnYGBmoNOribu6wLCtAgIN9BysJAl8LMVy0FxKoANAoAlKhlksRk2AudPGJrQGu+FgC4pgzgu+NdlIVtuFWU0MoE7VRwj+NksAKHhjsl0EbUDy+nTXcuHv4IVCBXrQIwxXHcOnORWClQgcGFANkUYqWDfTgFApoAAG9x8JRNlNAfXQDvopgUrDEiYGO+BUhZARc9UQPo8v/pm4K2qAHUqgO8jBpATbATdYLrmj4fDb7IpwdZEc31d4Gy8w+idg0P4whOAICFsgjn78EejvAKMxEEqNJSpMP0RAxgl7Z5spBLlepnpjGvUxfztxy2YSORSaZJM7kBT/Mz/KCjESt/kzZKSeC1RJvnay1UZGrwQftejMQr0+UHSNbTLBYqTZX3sF9vv1qpMhHggV55bxWKcZgi/znMx10Ii+MqgwblXX6bU0KWwkHu4BSSHyLDqLwXoUZIvlvzNkcIkzjLuJB8p9o3sD6LpYgWwbn/xmpj4mu5TZ9w69WTIJpzCsco54eBvndySt8WeBbVfKSB74wYvudneE6S/rzjuI7LsLjMJ7aLz7mNhwwbEG+h2Ph/D7EcoVr3q1gLt9hgVFppyVykQtM6YIp08LLZ2U0mdmyzLtE76z300ssvBszMe8mWbPHaf4Rc2JTaWoMpAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAyLTIwVDIzOjQ5OjQ3KzAxOjAwiotIwwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMi0yMFQyMzo0OTo0NyswMTowMPvW8H8AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 20">
+		<path id="Ellipse 869 copy 2" class="shp0" d="M7,33.5c0,14.64 11.92,26.5 26.61,26.5c14.7,0 26.61,-11.86 26.61,-26.5c0,-14.64 -11.92,-26.5 -26.61,-26.5c-14.7,0 -26.61,11.86 -26.61,26.5z" />
+		<use id="twitter-logo-silhouette" style="filter: url(#flt1)" href="#img1" transform="matrix(0.391,0,0,0.391,21,21)"/>
+	</g>
+</svg>

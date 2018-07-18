@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 90" width="91" height="90">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQWBBfN9xyAAAAEeklEQVRo3sWZa2hcRRTHf3s3kSZt0rSkSQQl2LQUjMG2isa2aiXSgAY/tCKKWIxoJMX4oNQHPhAEa8Gi+SJtDSKoaQVb20KrUqkPtLZJE8FtkxjSpCyra0xIaxJTabJ7/bA3m52Zu/fOTfZuzvmwu+f5n7ln5p6ZhXmmQNYzruY5ruMfWvkSM/sD3koM0+J92R9+BVPJ9CYmj0GOj+kC3Ect+UQIEaKPOE8QFCwa+cS/9Hl8J4x2gnb+FCQmfT4Onz1SMjsO+Ze+gHENAAfA8AnA7SzUsAr5B6BKy+rcfAPwsQbaNSrggn8bkcGEBoDt/o1/pZKsmzb+FSR7E+O32wkXsI1tLCVGD+fp4jxdRD0BUCugmT0YVFBFFcWMc5Cz6Zxz+N5mukb4iX00Ua4F4E3Ff70++tcdn1ucFq5xjXFQ8VusD8C9fj9yjdEreYS9PL+rrgDirHKMkJfyzk/wsfTG6kaU6woxQLWjvlKJ6rDhqAAGNWbJuZVS14AnAO0aAH7JHACV1rhWQYtLhBOS/aTGuhFoC8MO6VtZ5OL/l+Rxzlt6gGIe4X0ldTsvcJurb4nit987AIAiJdA7Wn41it+rTuaZ7wc8luC8A7A/FwS4mQcyBGCci07mak+ykceppczGNkaEiykcYUqxMRgjX5Cc5g79GVjCburT2gYpp5y7BUADAqAYy6X0njahzUQ1Gqn0PMkAvynSJuekM2e1HbS4bjHOZFBEqSLNZQU3sIQAo07vkPo5jV2Po3xAjX3Zr5eOzX7yMG/LIAw60xiHGfUFxA/io3rKxuRr7qcEMKikkb8zDuGP1MX5u6QcpUF6RMv4IuMQ/mNlIniVoqqzLdOjGYfwTSKw3MN/nEx5Ew08SJH1q5ShjEPYAnBcEpZYCXcTx8QkygZL8tKsEw2wnaf5yoo4w2HyISSILljJHsakl628xWUi1mXDxlkDqLWibmZM0myCS4Jgunv5HJO1ACyng3sAWKyMQJdnDmaPSpoXDcTt8Yr1mQcMAdDPOvoBuErc+/4MwE5utL59xhlBsxp+FhBNN5DPYHJE6mar51BuU8nGbJcg74IPBUGMAgCCHMOkTTgNN86p4qdfy02CdDzIimSJAASIcxIw2U8vOZRxOqnrpgyDQQYZZJHHXr+TV6xrySe5JUXeA5skpJNW8TlTIYc8TP+6pN8C+gXdAcilT3Lot2miChTJXdoAvk3xek/SvQGJNS9j3sX1Sac7OUU0pRVL0GvaAEbIswaxV9FtCAABztpO+xC/UkAlhQDEOE5nUreGOg8tfZgjVFDNUkl+kprEl3vnVN+z55na8DChmePD4nTsyHL6U+p19rNZTN9pf29WR0cWksdppTh9xdbyo6/pT4grzv6+eicv20jHmNBeeGCwzEbawa06zu/aYn/eQ3ootY0RUXHaUbettMcTgEGGtSMrdC2XFexhzyfHZpsZqNd1fogrguMl5V3gTgs5I6X/VDVK/6fJKhpZSyEwQhvNHv8xSFCQBmqoIMAUXRzm0Cxi+E3/Awh5JMLVIJoFAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAyLTIwVDIyOjA0OjIzKzAxOjAwIBpE4AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMi0yMFQyMjowNDoyMyswMTowMFFH/FwAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 10">
+		<path id="Ellipse 22" class="shp0" d="M8,45c0,20.99 17.01,38 38,38c20.99,0 38,-17.01 38,-38c0,-20.99 -17.01,-38 -38,-38c-20.99,0 -38,17.01 -38,38z" />
+		<use id="cardio" style="filter: url(#flt1)" href="#img1" transform="matrix(0.656,0,0,0.656,24,21)"/>
+	</g>
+</svg>

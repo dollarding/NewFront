@@ -1,12 +1,11 @@
 import React from 'react';
 
 const rootDivStyle = {
-  width: '90%',
+  width: '95%',
   margintop: '90px'
 };
 
 const secondDivDtyle = {
-  width: '80%',
   textalign: 'right',
   marginbottom: '100px'
 };
@@ -15,7 +14,7 @@ const secondDivDtyle = {
 
 const peregraphStyle = {
   width: '100%',
-  dir: "rtl"
+  direction: "rtl"
 };
 
 const Terms = () => {

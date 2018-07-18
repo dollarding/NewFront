@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import compose from 'recompose/compose';
 //import LocationButton from './buttons/LocationButton';
+import Typography from 'material-ui/Typography';
 
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
@@ -75,11 +76,9 @@ const styles = theme => ({
         flexWrap:'nowrap',
         justifyContent: 'space-around',
         width: '70%',
-        height: '48.1%',
+        height: '36.6%',
         alignItems: 'center',
-        backgroundImage: 'url("../../img/searchBackground.png")',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'round'
+        backgroundColor: '#323432a3',
     },
   container: {
     display: 'flex',
@@ -108,17 +107,23 @@ const styles = theme => ({
     marginRight: '2%'
   },
   button: {
-    width: '17%',
-    height: '50%',
-    //minWidth: 148,
+    width: '22%',
+    minWidth: '18%',
+    height: 'auto',
     backgroundColor: '#199147',
-    marginLeft: '12%',
+    marginLeft: '5%',
     '&:hover': {
         background: '#1bc15b'
       }
   },
   leftIcon: {
     marginRight: theme.spacing.unit,
+    width: '18%',
+    height: '50%'
+  },
+  title: {
+    fontSize: '1vw',
+    color: 'white'
   }
 });
 
@@ -185,7 +190,10 @@ class BenfitsSearch extends React.Component {
         <div className={classes.root}>
         <Button className={classes.button} variant="raised" color="primary">
         <LocationOn className={classes.leftIcon}/>
+        <Typography component="p" className={classes.title}>
         חפש לפי מיקום
+          </Typography>
+
       </Button>
         <Autosuggest
         theme={{

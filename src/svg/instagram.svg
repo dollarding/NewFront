@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 68" width="69" height="68">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQXMw44WX5DAAADhklEQVRo3tWZz0sbQRTHP7ERxB6S0qKSCJaQepO2xEKo0IsnEULx4C0HD+0lNw9BvBZyDoUQ0EPBv0B6EvTYliAGehNiDxobJdheWivUtKaHmM3M/shONruu/e5lZvbte9+d92be/AhghTgpkkSJEmEQZ2hwQo0aJd7zRf2zIbLs03T52SfLkL3xAGmqrhtvP1XSBLqZD7HlmfH2s0XI2uvud7y5M+Jil3fMl7hvQusbn/nlMAjv8oQHJu3fSeqDMmT4+xo5FphwaLqDCRbIUTP0guSIgMH3G4T7Ni0izIYhFoRwTEuvTkm5aryNFKeSnXT7xZA08E4Z8cQ8wIhEodqeF7ISL3f/PsgULwR/pyRb2VbjvuR7NzHLEU2aNHijTecbUigCcSnywy6an+K3oDt33RqWRkQclk2E3MGm1N1/tBkhJ7QuD5AUPtlzlcAzqXaHpyZWkkGiQrXcg/pRJokSAU6oUaFukPhBRFc3WonCodYdZ4qmY6xQ4krq4CtKrBCT5N5KEnUhGZ9prYdwqVW2FYyPUaRhmWYaFBnTZEPCz/1lQdCyrbVfIny+aWs+w7ltrjsno8nfo0iVn+zwXNIjhqcygUHWlBPumrSIMy5BHBAYZKennL/TdR0pEAgqhR0UmNW1fKXMHmUgQYJpxqW3sxR4raZapQcyuv+rMGOQmaGik8pY6uvRBWNS6F2RZ9hUbpi8NDjPhRHRF4GiZH6+a3/OSxSKbhCISeM+b+vSvDQvxExlBAIDtgoX6QTqAau28qscaOUgi3bi9gReCuUlLmzlL1iy+NoC3V0wKvj02F7ZNY6FmBk1ed+DCyaFeUw9WXckA0x2F7Uj4CxZly00OCAgZnRnBCLdRe2D0GPYETgRygllrQkLDQ4I1PomUOsuakegQlMrTysT6Eg2qfRHoM6uVh43yYFmmBFS867JYrUnAkjT0zuLPChimHcWX1vA52T0H6TjW7Ag8XRJprYoLfCYV0L9ER9sFqWwTkFJt9/LctVc0GCOdUVZWGeOhqqw6s4Iet+aKfSAl5tTa0ibU++259YQtucBPgo714ccqXpO4YDCChMcauVPQV3CVSdQ78GkDClZD1ASquoJtx+IVkpeHtOZw3BM5+VBpRkMB5XeHtXqYXpU6/thte/H9bfgwsLHK5tbc2nVouDDtZ0Mny8uWy7x9eq2hRu9vLbmc0PX9/8AMsnH8G9woNMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDItMjBUMjM6NTE6MTQrMDE6MDAh2sMOAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAyLTIwVDIzOjUxOjE0KzAxOjAwUId7sgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 19">
+		<path id="Ellipse 869 copy" class="shp0" d="M7.89,33.5c0,14.64 11.92,26.5 26.61,26.5c14.7,0 26.61,-11.86 26.61,-26.5c0,-14.64 -11.92,-26.5 -26.61,-26.5c-14.7,0 -26.61,11.86 -26.61,26.5z" />
+		<use id="instagram-logo (1)" style="filter: url(#flt1)" href="#img1" transform="matrix(0.422,0,0,0.422,21,20)"/>
+	</g>
+</svg>

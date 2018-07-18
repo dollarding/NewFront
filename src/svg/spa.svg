@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 90" width="91" height="90">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQWAjA+pw5tAAAC9UlEQVRo3u2YTUhUURTHf04GaqYWGpRU9GVtgigXUrOIFlEgpdCmwGgRUtBCQoLAzMCVEIa4yEVFRGAgYVBQiz7AvsDaCAVmRpKhzZSpUTY5zrQYp3lv3n0z99658Sjm3N1753/P751z7rv3PciaKcvjBmGiSmOUg+YAahSDx8Z7nzGApVqqEnMAQS3VWI4xgAJWaahmjMX/Z81cCeAyBcqanlyDADtZo6x5am4V6K2DoEmAgI4mC+AtQJTP3jbhBHPeZiAAWQBve8AwwCyT6sgmAdSLYDgDWQB1AOM9oLoOPM5AmK/eAgSJegsQAFA/E26minf08Uv4TGoZULQc9tM3/003RKnAo0zpu/C6SvA86hm0ye8LvHzMKQC0ywYvpZmAYALRp9gnBYDTkL4H1nOSI+QL7owwJbgaYJl0VtO27HZuuqT0C60ugR4oZGCfe2gftTxxkQ1zgkWuym4FgCrxFPkcZ8hF8pwDLEiZtQ4FgLVOeRnnCAqdI/Til6hrkwJAoV26kS5mhI4zXKRCsrHqpcP/sMr83CIidAvSQllSkIUc5gW9bBMA1EoDjMQlhfS4uLzhmGMBFtHIhz8eRx0AO6QB+uOSC8Lbj6lxbFTltDFl8wqxMslngzTAnbjkY9KNOXoEC6SCLqb5mTQGHOUplga4EpeMWy5+p5N1ku3mZiFJgLa44Or8hXGaNH822m1UEqAx5p5LE1uI0sk1QknttkI66Ijlf1+AcilNyp1gNe18U3ilTFgKd1dSsyfm7jySVdLNMA3J76mUtoS9ck+WOgM5VPNI4bmto0EB12aJ88AhzrBJdxp9S5TglBfhdU7F6aySagmvMK1/D+CshFcoDpAoQTijsNrqBMCrjAC01QmAft0pgCgvMwd4SEQboJ9pC4wcssDOa76EZtlqmWW3lGZABJDPay2AFtssJUyqbMZ2K+aSYvAJ6hyz1LmcLxPjLYvdq7OLDp65nI+tY5zbNLNcOIefey55iDBIO0Xa3fYf2m8+E1mwdNlXvgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMi0yMFQyMjowMjo0OCswMTowMOlsadoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDItMjBUMjI6MDI6NDgrMDE6MDCYMdFmAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 10">
+		<path id="Ellipse 22" class="shp0" d="M7,45c0,20.99 17.01,38 38,38c20.99,0 38,-17.01 38,-38c0,-20.99 -17.01,-38 -38,-38c-20.99,0 -38,17.01 -38,38z" />
+		<use id="beauty-products" style="filter: url(#flt1)" href="#img1" transform="matrix(0.672,0,0,0.672,21,22)"/>
+	</g>
+</svg>

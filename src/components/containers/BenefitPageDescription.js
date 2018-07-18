@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
+import Typography from 'material-ui/Typography';
 import BenefitTabs from './BenefitSelectionTabs';
 //import { Link } from 'react-router-dom';
 
@@ -16,8 +17,18 @@ const styles = {
         justifyContent: 'space-around',
         direction: 'rtl'
     },
-    title:{
+    cellPrice:{
         fontSize: '-webkit-xxx-large'
+    },
+    title:{
+        fontSize: '2vw'
+    },
+    smallLetters:{
+        fontSize: '1vw'
+    },
+    buttonTitle:{
+        fontSize: '1vw',
+        color: 'white'
     },
     businessDescription: {
         display: 'flex',
@@ -45,19 +56,29 @@ const BenefitPageDescription = ({classes, benefit, buttonTitle, onBenefitClick})
     return (
     <div className={classes.root}>
         <h1>{benefit.couponName}</h1>
-        <p>{benefit.couponDescription}</p>
-        <p>{benefit.MarketingStatement}</p>
+        <Typography component="p" className={classes.title}>
+            {benefit.couponDescription}
+          </Typography>
+          <br/>
+          <Typography component="p" className={classes.title}>
+            {benefit.MarketingStatement}
+          </Typography>
+          <br/>
         <div className={classes.businessDescription}>
         <div className={classes.cell}>
-        <b><font className={classes.title} color="#199147" size="3">&#8362;{benefit.cellPrice}</font></b>
+        <b><font className={classes.cellPrice} color="#199147" size="3">&#8362;{benefit.cellPrice}</font></b>
         <font color="grey" size="2"><del>&#8362;{benefit.tariff}</del></font>
         <Button onClick={onBenefitClick} color="primary" className={classes.button}>
-          {buttonTitle}
+        <Typography component="p" className={classes.buttonTitle}>
+            {buttonTitle}
+          </Typography>
         </Button>
         </div>
         <BenefitTabs benefit={benefit}/>
         </div>
-        <p><font size="1">{benefit.smallLetters}</font></p>
+        <Typography component="p" className={classes.smallLetters}>
+            {benefit.smallLetters}
+          </Typography>
     </div>
     );
 };

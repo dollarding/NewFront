@@ -13,6 +13,7 @@ import AboutUs from './AboutUs';
 const styles = theme => ({
   root: {
     width: '100%',
+    height: '42%',
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'row',
@@ -25,14 +26,11 @@ const styles = theme => ({
   },
   appBar:{
     width: '100%',
-    height: 300,
     display: 'flex',
     flexWrap: 'nowrap',
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundImage: 'url("../img/footer.png")',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'round'
+    backgroundColor: '#282c2cde',
   },
   textStyle: {
     direction: 'rtl',

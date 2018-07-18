@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 90" width="91" height="90">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQWBR00OcTfAAADaElEQVRo3u2YXUgUURTHf36VZFmoleAHGJkFWWCFRS9RCRGFkYEkCb1k+hIFPVUvIWQIUWSFUBk9CBYYYtB3iVRo5VoYlWTiR0IFKpiJu7ru9KCru+vMnXtnZ3vJc1525s6e3//ee+69Zwbm7H+3MJvizCNc564bd+i7kM5NutF0fZw2brEtlPgTuA3gM+6hgpjQ4E+Zwr3uIM5+/FlpvIZGq90SzivhbZdwUQBqos3nqopCmqd+d7PdDngY1wzhYxQCdT69BkiZTlUPVeSRFpyASkO8m/3gJ6AZgETGAp504WSYx6Sq4/MFg38DgD04fe5d4gAvDP/RoD78PYLhTwF2zuqtyAdUBWQLgn0EoEZpZdSoCigUBLsLhNOvgHeyMlxRwISgbRCIJV4hWjnfVAXYebp1UwZ2CvgBLFOIdYxRdQG9grYmIEs6Uhn3FdlT1mGQUB4WA+VSyefhgvVSqMQg6FUAGiXwn9g1E05dRxjPdI4UB1txkUtdwP03fleDtPOIp2hWez9pS3z2+kl/QiqQwM9ZvQ2ZFVCPk2G6aGQ3AJHU6gx3SM13+tbwTne+/4klcZJRg4QztUjL2AiOsJoMsoSbTzJ9oen1Ft5LrfhOKyWHmS2lCo/0iddFkp3wcEoYVDrxNWrtw2fjUIRP+g474PFcVxh4f28JfuCPMmARPumJweA38TYouIZGgVV4HJVMBI33npU6Jt6ICrisVOMZmyFHVBGdodomPLjUBZRSKgz5nXyFEtWpqvigyZw6SUPlC8EhNXwMfaYhi4AoWqXwbtWpLJUIOkQKsFZqjTxQnYAeqX7VA9Bu+twE69XwqyTndYz5QLX1PQD0V0GOpNAoMgGHyVPPOa4qQH7f3mAqoIE8xlUFuJC1ZBCWXOfIYUgcQm+LlBfQCawwbB3htHkIPQG/pAV8AVzcnrrKYLNfa690nABLkPj+q6HREfBiVxzQ/lAG5s2BSKKn/Q+vpYReQVz3S4/APj5I9tnf+7lHkc8kBo7AIBVsNMfvtVRgzHjb9MwX67a/IlYsIPhya4R1AgEaL1kgEvA7aAEaX4UCNO6IkrBdNlUEls5CYMywPZeI0OWAhsYAi4Dlhh9pP4v1W10FM2no/eZzWOdw9tBCpjHcu5VEWn5R1wK27uiA9gnxYTRnc/YXIBC/t0is4J8AAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDItMjBUMjI6MDU6MjkrMDE6MDBrqHCQAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAyLTIwVDIyOjA1OjI5KzAxOjAwGvXILAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 10">
+		<path id="Ellipse 22" class="shp0" d="M7,45c0,20.99 17.01,38 38,38c20.99,0 38,-17.01 38,-38c0,-20.99 -17.01,-38 -38,-38c-20.99,0 -38,17.01 -38,38z" />
+		<use id="dog" style="filter: url(#flt1)" href="#img1" transform="matrix(0.734,0,0,0.734,22,22)"/>
+	</g>
+</svg>

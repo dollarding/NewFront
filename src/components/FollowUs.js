@@ -4,20 +4,26 @@ import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
 
+import Facebook from "../svg/facebook.svg";
+import Twitter from "../svg/twitter.svg";
+import Instagram from "../svg/instagram.svg";
+
+
 const styles = {
     followUsContainer:{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        width: '15%',
+        width: '20%',
         justifySelf: 'flex-end',
-        height: '45%',
+        height: '35%',
         alignSelf: 'center',
         //minWidth: 250
       },
       textStyle: {
         direction: 'rtl',
-        marginRight: '4%'
+        marginRight: '4%',
+        fontSize: '2.5vw'
       },
       buttons:{
         display: 'flex',
@@ -25,14 +31,13 @@ const styles = {
         justifyContent: 'space-around',
       },
       button: {
-        //minWidth: 40,
-        height: 51,
-        width: 51,
         backgroundColor:"#3e3e3e",
         color: 'white',
         '&:hover': {
-            background: "#727272"
-          }
+            background: "transparent"
+          },
+        padding: '9px 8px',
+        minWidth: 42
       },
       img: {
         marginTop: -15
@@ -41,7 +46,7 @@ const styles = {
 
 
 const FollowUs = ({classes}) => {
-    const imgs = ["../../img/instagram.png", "../../img/twitter.png", "../../img/facebook.png"];
+    const imgs = [Instagram, Twitter, Facebook];
     
     return(
     <div className={classes.followUsContainer}>

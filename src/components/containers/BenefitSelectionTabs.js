@@ -8,7 +8,7 @@ import Typography from 'material-ui/Typography';
 
 function TabContainer({ children, dir }) {
   return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+    <Typography component="div" dir={dir} style={{ padding: 8 * 3 , fontSize: '1vw'}}>
       {children}
     </Typography>
   );
@@ -22,7 +22,7 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 505,
+    width: '100%',
     marginTop: 10
   },
 });

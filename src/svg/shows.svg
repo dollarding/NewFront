@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" width="90" height="90">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="64" height="64" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiAhQWBhqBcAK/AAAC10lEQVRo3u2ZS0hUURiAvxltUnuAmfYQs1KKWqRRWETkskVBtAhq0ZMeLoo2FkKrImhTyxYRFrQyimpXVBDYoswxeiwaiQnDISatEIJ8JHNbeDqN48w5995zj0My/1ncc//7n///zn8e99wZsCFnSdDHCSu+XUgzjihr9MZhCwCHZe1YfjLwQWbghVkGymill8fs8AgQylLzJadFP8ap8dQuJjPw0iwDx8W1yOZ8VgHUyVp9fgD+ieFYzgAAixJEBio5ysr8AbSQ4DofuWITQNW+jQgQ5iRV+chAI7WiFmHndAAs5AztbJb3kTSriCtfGVLsCaCEGBXAEQ5yy084vxn4K3uoELVTwYT3OgRbpGYjs/MBEMqim1YAC5L3rdjbKsguY7zlF/BF3L8iSYRVcsJaBYizjW5GJukOiOtiltgHGGQw57MkSb3rGTEHKtk7ZbxHeEeUATO4EXm6fSg0l6TmJ0VC18Ko1GaWHtYHA9AjNGul5qrQhOnLGd7BYYxzQQCkWCR05/lOikesEPfVpJQADg67zQGctH6UsGyS1VMtQJIF5gCjOUdzHff4rUFoNQdw+JbxjTifMlkvZ3la2U5XBsDtIAAcUtxnHzXU0cBFhnjGnBwtGzJaxoMBmFoeuATozR3E3UaUS9KPZSGWMguA1VzIsOu0k4Eb0nITTxhSWO63AdDPXGHXxrgGtdYfwA+l05vCqlm7FX1WBVG9DXtUDeXTy9oD23O/AF1Kt68BKKVRm0nlFPQPMJHYJhfryOcagCrlyLYBYe5o94qvfsMDvFe6jvJJG97hrjqE+kim3sM3yJeylQEAqHfRQ10xOhNBt2H4Id2xV3cq7jDjp5OUmYN59Bv0P0WTYQeAXQYAAf2IoV/r2csA1cEAhDlEwnPyr1EeTPgJKaXDE8BW971zJ8O88QQcDRrAmhQACgAFgP8IIObBa5zR4FGLaWfY1TYc8/Jn7x864I1JJXch3gAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wMi0yMFQyMjowNjoyNiswMTowMHbXu3oAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMDItMjBUMjI6MDY6MjYrMDE6MDAHigPGAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+	</style>
+	<g id="Group 10">
+		<path id="Ellipse 22" class="shp0" d="M7,45c0,20.99 17.01,38 38,38c20.99,0 38,-17.01 38,-38c0,-20.99 -17.01,-38 -38,-38c-20.99,0 -38,17.01 -38,38z" />
+		<use id="hand" style="filter: url(#flt1)" href="#img1" transform="matrix(0.734,0,0,0.734,22,22)"/>
+	</g>
+</svg>

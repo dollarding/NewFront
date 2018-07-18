@@ -5,6 +5,7 @@ import {bindActionCreators} from "redux";
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import Snackbar from 'material-ui/Snackbar';
+import Typography from 'material-ui/Typography';
 import benefitImage from '../../img/benefit.jpg';
 import compose from 'recompose/compose';
 
@@ -68,6 +69,11 @@ const styles = theme => ({
         margin: theme.spacing.unit * 2,
         alignSelf: 'center',
         justifySelf: 'center'
+    },
+    title: {
+        direction: 'rtl',
+        fontSize: '1vw',
+        color: 'white'
     }
     
 });
@@ -104,9 +110,10 @@ class BenefitPage extends React.Component {
     onChange = (event) => {
           let { errors } = this.state;
           const phoneNumber = event.target.value;
-          const isValid = phoneNumber !== "";
+          let isValid = phoneNumber.match(/[0][5][2-8][0-9]{7}/);
           if (!isValid){
               errors['sms'] = 'phone number is not valid!';
+              isValid = false;
           } 
           this.setState({phoneNumber, isValid, errors});
     }
@@ -114,11 +121,12 @@ class BenefitPage extends React.Component {
     onMailChange = (event) => {
         let { errors } = this.state;  
         const mailAdress = event.target.value;
-        const isValid = mailAdress !== "";
+        let isValid = mailAdress.match(/.+@.+\.(com|co\.il)/);
         if (!isValid){
             errors['email'] = 'email adress is not valid!';
+            isValid = false;
         } 
-        this.setState({mailAdress, isValid, errors});
+        this.setState({mailAdress, isValid , errors});
   }
 
     handleSend(){
@@ -153,7 +161,7 @@ class BenefitPage extends React.Component {
             <Snackbar
             className={classes.snackbar}
             open={this.state.snackbarOpen}
-            autoHideDuration={600}
+            autoHideDuration={6000}
             onClose={this.handleSnackbarClose}
             contentstyle={{
                 'aria-describedby': 'message-id'
@@ -176,13 +184,17 @@ class BenefitPage extends React.Component {
             <div className={classes.shareButtons}>
             <a className={classes.anchor} href={"http://www.facebook.com/sharer/sharer.php?u=http://www.Dollarding.co.il"}>
             <Button className={classes.button} variant="raised" color="primary">
+            <Typography component="p" className={classes.title}>
             שתפו דרך פייסבוק
+          </Typography>
         <img src={FacebookLogo} className={classes.leftIcon}/>
         </Button>
         </a>
         <a className={classes.anchor} href={"whatsapp://send?text=http://newdeals.co.il/benefit/" + benefit._id}>
         <Button className={classes.button} variant="raised" color="primary">
-        שתפו דרך ווצאפ
+        <Typography component="p" className={classes.title}>
+            שתפו דרך ווצאפ
+          </Typography>
         <img src={WhatsAppLogo} className={classes.leftIcon}/>
         </Button>
         </a>

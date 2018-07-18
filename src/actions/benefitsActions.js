@@ -28,7 +28,7 @@ export function loadBenefits() {
 export function sendSMS(phoneNumber, couponCode, benefitId) {
   return function(dispatch){
     Requests.SEND_SMS_BODY.to = phoneNumber;
-    Requests.SEND_SMS_BODY.text = "here is your benefit- http://dollarding/shared/" + benefitId + 
+    Requests.SEND_SMS_BODY.text = "here is your benefit- http://dollarding.co.il/shared/" + benefitId + 
     "\n coupon code- " + couponCode;
     
     return axios.post(Urls.SEND_SMS,Requests.SEND_SMS_BODY)
@@ -46,7 +46,7 @@ export function sendSMS(phoneNumber, couponCode, benefitId) {
 
 export function sendEmail(mailAdress, benefitId, benefitName) {
   return function(dispatch){
-    const benefitLink = "http://dollarding/shared/" + benefitId;
+    const benefitLink = "http://dollarding.co.il/shared/" + benefitId;
     const mailBody = Requests.SEND_EMAIL_BODY(mailAdress, benefitName, benefitLink);
     return axios.post(Urls.SEND_EMAIL, mailBody)
     .then(res => {

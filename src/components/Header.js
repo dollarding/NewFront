@@ -4,7 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import BenefitsSearch from './containers/BenefitsSearch';
 import CategoriesMenu from './containers/CategoriesMenu';
-import DollardingLogo from '../img/logo.png';
+import DollardingLogo from '../svg/logo.svg';
 import Button from 'material-ui/Button';
 import {Link} from 'react-router-dom';
 
@@ -17,18 +17,16 @@ const styles = {
   root: {
     width: '100%',
     display: 'flex',
+    height: '45%',
     flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: 'SkyBlue',
-    zDepth: 2,
+    justifyContent: 'space-around'
   },
   flex: {
     flex: 1,
   },
   appBar:{
     width: '100%',
-    height: 400,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -40,12 +38,8 @@ const styles = {
     display:'flex',
     flexDirection:'row',
     justifyContent:'center',
-    flex: 0.6,
-    alignItems: 'center'
-  },
-  button:{
-    width: '14.5%',
-    height: '49%'
+    alignItems: 'center',
+    marginTop: '2%'
   }
 };
 
@@ -53,9 +47,9 @@ const Header = ({classes}) => (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <div className={classes.upperHeader}>
-      <Button disableRipple={true} className={classes.button} component={Link} to={"/"}>        
+      <Button disableRipple={true} component={Link} to={"/"}>
         <img src={DollardingLogo} />
-        </Button>  
+        </Button>
         <BenefitsSearch />
         </div>
         <CategoriesMenu/>

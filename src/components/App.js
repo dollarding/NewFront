@@ -30,16 +30,10 @@ const theme = createMuiTheme({
 });
 
 
-const appStyle = {
-  overflow: 'hidden',
-  height: 663,
-  overflowY: 'auto'
-};
 
 class App extends React.Component {
   render() {
     return (
-      <div style={appStyle}>
         <MuiThemeProvider theme={theme}>
           <AppLayout>
           <Header/>
@@ -47,7 +41,6 @@ class App extends React.Component {
           <Footer/>
           </AppLayout>
         </MuiThemeProvider>
-        </div>
 
     );
   }
