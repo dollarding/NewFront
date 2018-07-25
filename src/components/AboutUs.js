@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-//import Button from 'material-ui/Button';
+import { withStyles } from '@material-ui/core/styles';
+//import Button from '@material-ui/core/Button';
 //import AppStoreIcon from '../svg/app-store.svg';
 //import PlayStoreIcon from '../svg/play-store.svg';
 
@@ -42,7 +42,7 @@ const styles = theme => ({
 
 
 const AboutUs = ({classes}) => {
-    
+
     return(
         <div className={classes.aboutUsContainer}>
         <h1 className={classes.textStyle}>חברה</h1>

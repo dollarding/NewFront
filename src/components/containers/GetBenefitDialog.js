@@ -1,14 +1,14 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
-import Button from 'material-ui/Button';
-import TextField from 'material-ui/TextField';
-import Dialog ,{ DialogActions, DialogContent, DialogTitle} from 'material-ui/Dialog';
-import { withStyles } from 'material-ui/styles';
-import Email from 'material-ui-icons/Email';
-import Sms from 'material-ui-icons/Sms';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import {Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
+import Email from '@material-ui/icons/Email';
+import Sms from '@material-ui/icons/Sms';
 import DollardingIconButton from './buttons/DollardingIconButton';
-//import IconButton from 'material-ui/IconButton';
-//import PhotoCamera from 'material-ui-icons/PhotoCamera';
+//import IconButton from '@material-ui/core/IconButton';
+//import PhotoCamera from '@material-ui/core-icons/PhotoCamera';
 
 const styles = theme => ({
   title: {
@@ -118,7 +118,7 @@ class GetBenefitDialog extends React.Component {
         margin="dense"
         id="email"
         type="email"
-        errorText={errors['email']}        
+        errorText={errors['email']}
         fullWidth
         onChange={this.props.onMailChange}
         />
@@ -162,7 +162,7 @@ class GetBenefitDialog extends React.Component {
 GetBenefitDialog.propTypes = {
     handleClickOpen: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired, 
+    open: PropTypes.bool.isRequired,
     handleSend: PropTypes.func.isRequired,
     handleEmailSend: PropTypes.func.isRequired,
     onChange: PropTypes.func.isRequired,

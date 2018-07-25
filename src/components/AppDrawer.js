@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Drawer from 'material-ui/Drawer';
-import { MenuItem } from 'material-ui/Menu';
+import Drawer from '@material-ui/core/Drawer';
+import { MenuItem } from '@material-ui/core/Menu';
 import {Link} from 'react-router-dom';
 
 const AppDrawer = ({isOpen, onDrawerRequest}) => {

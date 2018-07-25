@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import AppBar from 'material-ui/AppBar';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
 import BenefitsSearch from './containers/BenefitsSearch';
 import CategoriesMenu from './containers/CategoriesMenu';
 import DollardingLogo from '../svg/logo.svg';
-import Button from 'material-ui/Button';
+import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
 
 /**

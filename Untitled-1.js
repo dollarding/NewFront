@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Subheader from 'material-ui/List/ListSubheader';
-import IconButton from 'material-ui/IconButton';
-import InfoIcon from 'material-ui-icons/Info';
+import { withStyles } from '@material-ui/core/styles';
+import GridList, { GridListTile, GridListTileBar } from '@material-ui/core/GridList';
+import Subheader from '@material-ui/core/List/ListSubheader';
+import IconButton from '@material-ui/core/IconButton';
+import InfoIcon from '@material-ui/core-icons/Info';
 import tileData from './tileData';
 
 const styles = theme => ({

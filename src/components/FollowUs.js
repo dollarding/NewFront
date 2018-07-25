@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Button from 'material-ui/Button';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 
 import Facebook from "../svg/facebook.svg";
@@ -47,17 +47,17 @@ const styles = {
 
 const FollowUs = ({classes}) => {
     const imgs = [Instagram, Twitter, Facebook];
-    
+
     return(
     <div className={classes.followUsContainer}>
     <h1 className={classes.textStyle}>עקבו אחרינו</h1>
     <div className={classes.buttons}>
-        {imgs.map(mySvg => 
+        {imgs.map(mySvg =>
         (<Button className={classes.button} key={mySvg} variant="fab" size="small" >
         <img className={classes.img} src={mySvg}/>
         </Button>)
         )}
-      
+
     </div>
   </div>
     );

@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
-import { withStyles } from 'material-ui/styles';
-import Button from 'material-ui/Button';
-import Snackbar from 'material-ui/Snackbar';
-import Typography from 'material-ui/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import Snackbar from '@material-ui/core/Snackbar';
+import Typography from '@material-ui/core/Typography';
 import benefitImage from '../../img/benefit.jpg';
 import compose from 'recompose/compose';
 
@@ -14,7 +14,7 @@ import * as benefitActions from '../../actions/benefitsActions';
 import FacebookLogo from '../../svg/facebook-logo.svg';
 import WhatsAppLogo from '../../svg/whatsapp-logo.svg';
 import GetBenefitDialog from '../containers/GetBenefitDialog';
-import {CircularProgress} from 'material-ui/Progress';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const styles = theme => ({
     root: {
@@ -75,10 +75,10 @@ const styles = theme => ({
         fontSize: '1vw',
         color: 'white'
     }
-    
+
 });
 
-class BenefitPage extends React.Component { 
+class BenefitPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -89,20 +89,20 @@ class BenefitPage extends React.Component {
             errors : {},
             snackbarOpen: props.smsSent
           };
-        
+
         this.handleSend = this.handleSend.bind(this);
         this.handleEmailSend = this.handleEmailSend.bind(this);
-        
+
     }
 
     handleClickOpen = () => {
         this.setState({ open: true });
       };
-    
+
     handleClose = () => {
         this.setState({ open: false , phoneNumber: "", mailAdress: ""});
     };
-    
+
     handleSnackbarClose = () => {
         this.setState({snackbarOpen: false});
     };
@@ -114,32 +114,32 @@ class BenefitPage extends React.Component {
           if (!isValid){
               errors['sms'] = 'phone number is not valid!';
               isValid = false;
-          } 
+          }
           this.setState({phoneNumber, isValid, errors});
     }
 
     onMailChange = (event) => {
-        let { errors } = this.state;  
+        let { errors } = this.state;
         const mailAdress = event.target.value;
         let isValid = mailAdress.match(/.+@.+\.(com|co\.il)/);
         if (!isValid){
             errors['email'] = 'email adress is not valid!';
             isValid = false;
-        } 
+        }
         this.setState({mailAdress, isValid , errors});
   }
 
     handleSend(){
         const { benefit } = this.props;
         this.props.actions.sendSMS("972" + this.state.phoneNumber.slice(1,), benefit.codeNumber, benefit._id);
-        
+
         this.handleClose();
         this.setState({snackbarOpen: true});
     }
 
     handleEmailSend(){
         const { benefit } = this.props;
-        this.props.actions.sendEmail(this.state.mailAdress, benefit._id, benefit.couponName);        
+        this.props.actions.sendEmail(this.state.mailAdress, benefit._id, benefit.couponName);
         this.handleClose();
         this.setState({snackbarOpen: true});
     }
@@ -151,8 +151,8 @@ class BenefitPage extends React.Component {
     render() {
         const {classes, benefit} = this.props;
         if (benefit === null){
-            return (          
-            <div className={classes.progressContainer}> 
+            return (
+            <div className={classes.progressContainer}>
             <CircularProgress className={classes.progress} color="primary" size={80} />
             </div> );
         }
@@ -167,14 +167,14 @@ class BenefitPage extends React.Component {
                 'aria-describedby': 'message-id'
             }}
             message={<span id="message-id">ההטבה בדרך אליך!</span>} />
-            <GetBenefitDialog 
+            <GetBenefitDialog
             handleEmailSend={this.handleEmailSend}
             mailAdress={this.state.mailAdress}
             phoneNumber={this.state.phoneNumber}
             onChange={this.onChange}
-            handleClickOpen={this.handleClickOpen} 
-            handleClose={this.handleClose} 
-            open={this.state.open} 
+            handleClickOpen={this.handleClickOpen}
+            handleClose={this.handleClose}
+            open={this.state.open}
             onMailChange={this.onMailChange}
             handleSend={this.handleSend}
             errors={this.state.errors}
@@ -200,7 +200,7 @@ class BenefitPage extends React.Component {
         </a>
             </div>
             </div>
-            <BenefitPageDescription onBenefitClick={this.handleClickOpen} buttonTitle="לחצו לקבלת הטבה" benefit={benefit}/>            
+            <BenefitPageDescription onBenefitClick={this.handleClickOpen} buttonTitle="לחצו לקבלת הטבה" benefit={benefit}/>
           </div>
         );
     }

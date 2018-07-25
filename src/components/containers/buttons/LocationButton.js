@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import LocationOn from 'material-ui-icons/LocationOn';
-import IconButton from 'material-ui/IconButton';
+import LocationOn from '@material-ui/icons/LocationOn';
+import IconButton from '@material-ui/core/IconButton';
 
 
 class LocationButton extends React.Component {
@@ -12,7 +12,7 @@ class LocationButton extends React.Component {
             benefits: this.props.benefits
         };
     }
-    
+
     filterByLocation = () => {
 
     };

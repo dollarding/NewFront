@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import GridList, { GridListTile } from 'material-ui/GridList';
+import { withStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 import BenefitCard from './BenefitCard';
-import Card from 'material-ui/Card';
+import Card from '@material-ui/core/Card';
 import CategoryHeader from '../CategoryHeader';
 
 
@@ -38,7 +39,7 @@ const styles = theme => ({
       height: '100% !important',
       width: '17.5% !important',
       borderColor:'#1bc15b'
-    }, 
+    },
   },
   title: {
     color: theme.palette.primary.light,

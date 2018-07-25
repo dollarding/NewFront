@@ -4,8 +4,8 @@ import Benefits from '../benefits/Benefits';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as benefitsActions from '../../actions/benefitsActions';
-import {CircularProgress} from 'material-ui/Progress';
-import { withStyles } from 'material-ui/styles';
+import {CircularProgress} from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import compose from 'recompose/compose';
 
 const styles = theme => ({
@@ -23,7 +23,7 @@ const styles = theme => ({
 });
 
 class HomePage extends React.Component {
-  
+
       constructor(props, context) {
           super(props, context);
       }
@@ -32,7 +32,7 @@ class HomePage extends React.Component {
         const {benefits, classes} = this.props;
         if (benefits.length === 0){
           return (
-          <div className={classes.root}> 
+          <div className={classes.root}>
           <CircularProgress className={classes.progress} color="primary" size={80} />
           </div> );
         }

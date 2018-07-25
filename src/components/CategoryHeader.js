@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import Button from 'material-ui/Button';
-import KeyboardArrowLeft from 'material-ui-icons/KeyboardArrowLeft';
+import Button from '@material-ui/core/Button';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -38,7 +38,7 @@ CategoryHeader.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     //category: PropTypes.string.isRequired,
-    
+
 };
 
 export default withStyles(styles)(CategoryHeader);

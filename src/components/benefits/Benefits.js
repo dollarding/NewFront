@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GridList from 'material-ui/GridList';
+import GridList from '@material-ui/core/GridList';
 import * as categories from '../../constants/categoriesTypes';
 
 import SingleLineCategory from './SingleLineCategory';
@@ -20,7 +20,7 @@ const Categories = [
     {title:"בעלי מקצוע", categoryType: categories.PROFESSIONALS_CATEGORY_VALUE},
     {title:"ספורט", categoryType: categories.SPORT_CATEGORY_VALUE},
     {title:"תיירות", categoryType: categories.TOURISM_CATEGORY_VALUE}
-    
+
 ];
 
 
@@ -41,8 +41,8 @@ const styles = {
         width: '100%',
         overflowY: 'inherit',
         height: '100%',
-        padding: 16      
-        
+        padding: 16
+
     }
 };
 
@@ -57,7 +57,7 @@ const Benefits = (props) =>{
 
     <div style={styles.root}>
         <GridList style={styles.gridList}>
-            {Categories.map(category => 
+            {Categories.map(category =>
                 <SingleLineCategory key={category.categoryType} title={category.title} benefits={filterBenefitsByCategory(props.benefits, category)}/>
             )}
         </GridList>

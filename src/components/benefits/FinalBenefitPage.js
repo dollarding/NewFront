@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
-import Button from 'material-ui/Button';
-import { CircularProgress } from 'material-ui/Progress';
+import Button from '@material-ui/core/Button';
+import { CircularProgress } from '@material-ui/core';
 import { withRouter } from 'react-router';
 import compose from 'recompose/compose';
 
@@ -51,7 +51,7 @@ const styles = theme => ({
     }
 });
 
-class FinalBenefitPage extends React.Component { 
+class FinalBenefitPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -60,7 +60,7 @@ class FinalBenefitPage extends React.Component {
 
         this.activateBenefit = this.activateBenefit.bind(this);
     }
-    
+
     componentWillMount(){
         this.loadFinalBenefit(this.props.match.params.id);
     }
@@ -94,7 +94,7 @@ class FinalBenefitPage extends React.Component {
 
         if (this.state.fetching)
         {
-            return ( 
+            return (
             <div className={classes.root}>
             <CircularProgress className={classes.progress} color="primary" size={80} />
             </div>
@@ -115,7 +115,7 @@ class FinalBenefitPage extends React.Component {
         </Button>
             </div>
             </div>
-            <BenefitPageDescription onBenefitClick={this.activateBenefit} buttonTitle="לחצו למימוש הטבה" benefit={benefit} />            
+            <BenefitPageDescription onBenefitClick={this.activateBenefit} buttonTitle="לחצו למימוש הטבה" benefit={benefit} />
           </div>
         );
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import LocationSVG from '../../svg/location.svg';
 import BagSVG from '../../svg/supermarket-bag.svg';
 import EyeSVG from '../../svg/eye.svg';
@@ -21,7 +21,7 @@ const styles = {
     height: 90
   }
 };
-  
+
 const BenefitCardDetails = ({classes, data}) => (
     <div className={classes.root}>
     <p>

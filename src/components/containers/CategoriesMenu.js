@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
 import compose from 'recompose/compose';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import * as categories from '../../constants/categoriesTypes';
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 
 import Restaurant from "../../svg/restaurants.svg";
@@ -122,7 +122,7 @@ class CategoriesMenu extends React.Component {
           <Button  classes={{label: classes.category}} component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.ElECTRONICS_CATEGORY_VALUE]}>
           <img className={classes.image} src={Electronic}/>
           <Typography component="p" className={classes.title}>
-            חשמל 
+            חשמל
           </Typography>
           </Button>
           <Button  classes={{label: classes.category}} component={Link} to={"/category/" + categories.CATEGORIES_DICT[categories.KIDS_CATEGORY_VALUE]}>

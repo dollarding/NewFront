@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import BenefitCard from '../benefits/BenefitCard';
-import { withStyles } from 'material-ui/styles';
-import GridList, { GridListTile } from 'material-ui/GridList';
+import { withStyles } from '@material-ui/core/styles';
+import {GridList, GridListTile } from '@material-ui/core';
 import compose from 'recompose/compose';
 import * as categories from '../../constants/categoriesTypes';
 
@@ -35,8 +35,8 @@ const styles = {
             height: '235px !important;',
             width: '16.3667%  !important;',
             borderColor:'#1bc15b'
-          },        
-    } 
+          },
+    }
 };
 
 
@@ -63,7 +63,7 @@ class CategoryPage extends React.Component {
         const category = this.getKeyByValue(categories.CATEGORIES_DICT, currentProps.match.params.id);
         const categoryList = this.props.benefits.filter( (item) =>
         item.categories.some((x) => x === category));
-        return this.setState({categoryList: categoryList, categoryTitle: currentProps.match.params.id});  
+        return this.setState({categoryList: categoryList, categoryTitle: currentProps.match.params.id});
     }
 
     getKeyByValue = (object, value) => {

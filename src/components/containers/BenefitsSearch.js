@@ -5,17 +5,17 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import compose from 'recompose/compose';
 //import LocationButton from './buttons/LocationButton';
-import Typography from 'material-ui/Typography';
+import Typography from '@material-ui/core/Typography';
 
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
-import TextField from 'material-ui/TextField';
-import Paper from 'material-ui/Paper';
-import Button from 'material-ui/Button';
-import LocationOn from 'material-ui-icons/LocationOn';
-import { MenuItem } from 'material-ui/Menu';
-import { withStyles } from 'material-ui/styles';
-//import IconButton from 'material-ui/IconButton';
+import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import LocationOn from '@material-ui/icons/LocationOn';
+import { MenuItem } from '@material-ui/core/Menu';
+import { withStyles } from '@material-ui/core/styles';
+//import IconButton from '@material-ui/core/IconButton';
 
 
 
@@ -140,17 +140,17 @@ class BenfitsSearch extends React.Component {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
     let count = 0;
-  
+
     return inputLength === 0
       ? []
       : this.props.benefits.filter(benefit => {
           const keep =
             count < 4 && benefit.couponName.toLowerCase().includes(inputValue);
-  
+
           if (keep) {
             count += 1;
           }
-  
+
           return keep;
         });
   }

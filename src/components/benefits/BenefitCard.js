@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Button from 'material-ui/Button';
-import { withStyles } from 'material-ui/styles';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Typography from 'material-ui/Typography';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import  {Card, CardActions,CardContent,CardMedia} from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import benefitImage from '../../img/benefit.jpg';
 import BenefitCardDetails from './BenefitCardDetails';
 
@@ -58,7 +58,7 @@ const styles = {
           }
   }
 };
-  
+
 const BenefitCard = ({classes, benefit}) => (
         <Link to={"/benefit/"+ benefit._id} style={{textDecoration: 'none'}}>
         <Card className={classes.root}>
@@ -71,7 +71,7 @@ const BenefitCard = ({classes, benefit}) => (
         <div className={classes.cellPrice}>
             <font color="#199147" size="2">&#8362;מ-{benefit.cellPrice}</font>
         <font color="grey" size="1"><del>&#8362;{benefit.tariff}</del></font>
-        </div>       
+        </div>
           <Typography component="p" className={classes.title}>
             {benefit.couponName}
           </Typography>
