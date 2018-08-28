@@ -34,7 +34,7 @@ const styles = {
         '&:hover': {
             height: '235px !important;',
             width: '16.3667%  !important;',
-            borderColor:'#1bc15b'
+            borderColor:'#b07524'
           },        
     } 
 };
@@ -73,7 +73,7 @@ class CategoryPage extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-        <div className={classes.root}>
+        <div id="list" className={classes.root}>
             <h1> {this.state.categoryTitle}</h1>
             <GridList
             cols = {6}

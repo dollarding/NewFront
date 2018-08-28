@@ -101,7 +101,7 @@ class FinalBenefitPage extends React.Component {
             );
         }
         return (
-            <div className={classes.root}>
+            <div id="single" className={classes.root}>
             <div className={classes.benefitImage}>
             <img className={classes.image} src={benefitImage} />
             <div className={classes.shareButtons}>

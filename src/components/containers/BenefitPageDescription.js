@@ -21,13 +21,13 @@ const styles = {
         fontSize: '-webkit-xxx-large'
     },
     title:{
-        fontSize: '2vw'
+        fontSize: '1em'
     },
     smallLetters:{
-        fontSize: '1vw'
+        fontSize: '1em'
     },
     buttonTitle:{
-        fontSize: '1vw',
+        fontSize: '1em',
         color: 'white'
     },
     businessDescription: {
@@ -43,18 +43,18 @@ const styles = {
         width: '100%'
     },
     button:{
-        backgroundColor:"#199147",
+        backgroundColor:"#97641f",
         width: '50%',
         color: 'white',
         '&:hover': {
-            background: '#1bc15b'
+            background: '#b07524'
           }
       }
 };
 
 const BenefitPageDescription = ({classes, benefit, buttonTitle, onBenefitClick}) =>{
     return (
-    <div className={classes.root}>
+    <div id="single_desc" className={classes.root}>
         <h1>{benefit.couponName}</h1>
         <Typography component="p" className={classes.title}>
             {benefit.couponDescription}
@@ -66,7 +66,7 @@ const BenefitPageDescription = ({classes, benefit, buttonTitle, onBenefitClick})
           <br/>
         <div className={classes.businessDescription}>
         <div className={classes.cell}>
-        <b><font className={classes.cellPrice} color="#199147" size="3">&#8362;{benefit.cellPrice}</font></b>
+        <b><font className={classes.cellPrice} color="#97641f" size="3">&#8362;{benefit.cellPrice}</font></b>
         <font color="grey" size="2"><del>&#8362;{benefit.tariff}</del></font>
         <Button onClick={onBenefitClick} color="primary" className={classes.button}>
         <Typography component="p" className={classes.buttonTitle}>

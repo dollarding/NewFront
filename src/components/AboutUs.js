@@ -26,9 +26,9 @@ const styles = theme => ({
       button: {
         height: 48,
         width: 220,
-        backgroundColor: '#199147',
+        backgroundColor: '#97641f',
         '&:hover': {
-            background: '#1bc15b'
+            background: '#b07524'
           }
       },
       rightIcon: {

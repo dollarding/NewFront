@@ -33,11 +33,9 @@ const styles = theme => ({
   gridTile: {
     width: '17% !important',
     height: '99% !important',
-    border: '1px solid #00000057',
+    border: '1px solid #eee',
     '&:hover': {
-      height: '100% !important',
-      width: '17.5% !important',
-      borderColor:'#1bc15b'
+      borderColor:'#aaa'
     }, 
   },
   title: {

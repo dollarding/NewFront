@@ -72,7 +72,7 @@ const styles = theme => ({
     },
     title: {
         direction: 'rtl',
-        fontSize: '1vw',
+        fontSize: '1em',
         color: 'white'
     }
     
@@ -157,7 +157,7 @@ class BenefitPage extends React.Component {
             </div> );
         }
         return (
-            <div className={classes.root}>
+            <div id="single" className={classes.root}>
             <Snackbar
             className={classes.snackbar}
             open={this.state.snackbarOpen}

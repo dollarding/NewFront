@@ -3,13 +3,17 @@ $vin-blue: #5bb7db;
 $vin-green: #60b044;
 $vin-red: #ff0000;
 
+
+@media (max-width:800px) {
+  ul.SingleLineGridList-gridList-164 {flex-wrap:wrap}
+  li.SingleLineGridList-gridTile-165 {flex-basis:50%;width:auto!important}
+  }
 /* Styles */
 html {
   height: 100%;
 }
 
 body {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4em;
   color: #4d4d4d;
   margin: 0 auto;
@@ -44,8 +48,8 @@ td.fuel-savings-label { width: 175px; }
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background-color: rgb(25, 145, 71);
-  -webkit-box-shadow: inset rgb(25, 145, 71) 0px 9px 33px;
+  background-color:#b07524;
+  -webkit-box-shadow: inset #b07524 0px 9px 33px;
 }
 ::-webkit-scrollbar-corner {
   background-color: transparent;

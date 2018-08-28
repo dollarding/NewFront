@@ -29,14 +29,14 @@ const styles = {
   textStyle: {
     direction: 'rtl',
     marginRight: '4%',
-    fontSize: '2.5vw'
+    fontSize: '1em'
   },
   button: {
-    backgroundColor: '#199147',
+    backgroundColor: '#97641f',
     width: '25%',
     height: '90%%',
     '&:hover': {
-        background: '#1bc15b'
+        background: '#b07524'
       }
   },
   buttonRoot: {
@@ -51,7 +51,7 @@ const styles = {
     color: 'white',
     width: '50%',
     height: '100%',
-    fontSize: '1vw'
+    fontSize: '1em'
   },
 };
 
@@ -61,7 +61,7 @@ const ContactUs = ({classes}) => (
         <h1 className={classes.textStyle}>הרשמה לקבלת הטבות</h1>
         <div className={classes.contactUs}>
         <Button classes={{ root: classes.buttonRoot }} className={classes.button} variant="raised" color="primary">
-        <Typography component="p" style={{fontSize: '1vw', color: 'white'}}>
+        <Typography component="p" style={{fontSize: '1em', color: 'white'}}>
             שלח
           </Typography>
           <Send className={classes.rightIcon}/>

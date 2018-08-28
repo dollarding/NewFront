@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
+
+body {font-family:'Rubik'}
+.avigdor {max-height:120px}
+.header {width:100%;display:flex;justify-content:space-between;background-image:url("../img/hello.jpg");background-size:cover}
+.header .BenfitsSearch-input-61 {padding:10px}
+.CategoriesMenu-image-126 {filter:sepia(100%) contrast(200%)}
+
+@media (max-width:900px) {
+    header .Header-upperHeader-3 {display:block;text-align:center}
+    #header_search {justify-content:center;margin:20px auto 0 auto;width:90%}
+    .CategoriesMenu-root-1415 .CategoriesMenu-buttons-1416 {overflow-x:auto;vertical-align:top}
+    ul.SingleLineGridList-gridList-163,#list ul {flex-wrap:wrap}
+    li.SingleLineGridList-gridTile-164,#list ul li {flex-basis:calc(50% - 20px);margin:10px}
+    li.SingleLineGridList-gridTile-164:last-child {display:none}
+
+    #footer header {display:block;text-align:center}
+    #footer header > div {width:auto}
+    #single {display:block;width:auto}
+    #single > div {width:auto;height:auto;padding:20px;text-align:center}
+    #single_desc {flex-direction:column}
+    #single_desc div[class*=BenefitPageDescription-cell] {flex-direction:column;text-align:center;width:auto;margin:20px auto;display:block}
+    #single_desc div[class*=MuiTabs-flexContainer] {}
+    #single_desc .MuiAppBar-root-4 {flex-direction:row}
+}
+
+@media (max-width:600px) {
+    .Header-root-1 {height:70vh}
+    #header_search {flex-direction:column-reverse}
+    #header_search button {width:auto;margin:0}
+    #header_search button svg {height:1em}
+    #header_search .BenfitsSearch-container-57 {width:100%}
+    #header_search input {box-sizing:border-box;margin:0}
+    #list ul li {flex-basis:100%;margin:10px 0}
+}

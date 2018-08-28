@@ -23,7 +23,7 @@ const styles = {
   },
   title:{
     direction: 'rtl',
-    fontSize: '1vw'
+    fontSize: '1em'
   },
   cellPrice: {
     display: 'flex',
@@ -50,11 +50,11 @@ const styles = {
     padding:4
   },
   button:{
-    backgroundColor:"#199147",
+    backgroundColor:"#97641f",
     width: '80%',
     color: 'white',
         '&:hover': {
-            background: '#1bc15b'
+            background: '#b07524'
           }
   }
 };
@@ -69,7 +69,7 @@ const BenefitCard = ({classes, benefit}) => (
         </CardMedia>
         <CardContent className={classes.cardContent}>
         <div className={classes.cellPrice}>
-            <font color="#199147" size="2">&#8362;מ-{benefit.cellPrice}</font>
+            <font color="#97641f" size="2">&#8362;מ-{benefit.cellPrice}</font>
         <font color="grey" size="1"><del>&#8362;{benefit.tariff}</del></font>
         </div>       
           <Typography component="p" className={classes.title}>

@@ -50,7 +50,7 @@ const styles = theme => ({
 });
 
 const Footer = ({classes}) => (
-    <div className={classes.root}>
+    <div id="footer" className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
       <ContactUs />
       <FollowUs />

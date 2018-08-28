@@ -4,10 +4,10 @@ import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import BenefitsSearch from './containers/BenefitsSearch';
 import CategoriesMenu from './containers/CategoriesMenu';
-import DollardingLogo from '../svg/logo.svg';
+import DollardingLogo from '../img/logo.png';
 import Button from 'material-ui/Button';
 import {Link} from 'react-router-dom';
-
+import '../styles/style.css';
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.
@@ -25,15 +25,6 @@ const styles = {
   flex: {
     flex: 1,
   },
-  appBar:{
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundImage: 'url("../img/HeaderBackground.png")',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'round'
-  },
   upperHeader:{
     display:'flex',
     flexDirection:'row',
@@ -45,10 +36,11 @@ const styles = {
 
 const Header = ({classes}) => (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.appBar}>
+
+      <AppBar position="static" className="header">
         <div className={classes.upperHeader}>
       <Button disableRipple={true} component={Link} to={"/"}>
-        <img src={DollardingLogo} />
+        <img className="avigdor" src={DollardingLogo} />
         </Button>
         <BenefitsSearch />
         </div>

@@ -77,8 +77,7 @@ const styles = theme => ({
         justifyContent: 'space-around',
         width: '70%',
         height: '36.6%',
-        alignItems: 'center',
-        backgroundColor: '#323432a3',
+        alignItems: 'center'
     },
   container: {
     display: 'flex',
@@ -110,10 +109,10 @@ const styles = theme => ({
     width: '22%',
     minWidth: '18%',
     height: 'auto',
-    backgroundColor: '#199147',
+    backgroundColor: '#97641f',
     marginLeft: '5%',
     '&:hover': {
-        background: '#1bc15b'
+        background: '#6b4615'
       }
   },
   leftIcon: {
@@ -122,7 +121,7 @@ const styles = theme => ({
     height: '50%'
   },
   title: {
-    fontSize: '1vw',
+    fontSize: '1em',
     color: 'white'
   }
 });
@@ -187,7 +186,7 @@ class BenfitsSearch extends React.Component {
     const { classes } = this.props;
 
     return (
-        <div className={classes.root}>
+        <div id="header_search" className={classes.root}>
         <Button className={classes.button} variant="raised" color="primary">
         <LocationOn className={classes.leftIcon}/>
         <Typography component="p" className={classes.title}>

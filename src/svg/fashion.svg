@@ -5,7 +5,7 @@
 	</defs>
 	<style>
 		tspan { white-space:pre }
-		.shp0 { fill: #199147;stroke: #2daf5d;stroke-width: 2 } 
+		.shp0 { fill: #97641f;stroke: #b77926;stroke-width: 2 }
 	</style>
 	<g id="Group 10">
 		<path id="Ellipse 22" class="shp0" d="M8,45c0,20.99 17.01,38 38,38c20.99,0 38,-17.01 38,-38c0,-20.99 -17.01,-38 -38,-38c-20.99,0 -38,17.01 -38,38z" />

@@ -36,11 +36,14 @@ const styles = {
     width: '90%',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+      alignItems:'flex-start',
+      textAlign:'center'
   },
   title: {
-    fontSize: '1vw',
-     color: 'white'
+    fontSize: '.8em',
+     color: 'white',
+      lineHeight:'1'
   },
   category: {
     display: 'flex',
