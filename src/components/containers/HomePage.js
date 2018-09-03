@@ -4,7 +4,7 @@ import Benefits from '../benefits/Benefits';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import * as benefitsActions from '../../actions/benefitsActions';
-import {CircularProgress} from '@material-ui/core';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles } from '@material-ui/core/styles';
 import compose from 'recompose/compose';
 

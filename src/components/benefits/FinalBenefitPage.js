@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import { CircularProgress } from '@material-ui/core';
+import  CircularProgress from '@material-ui/core/CircularProgress';
 import { withRouter } from 'react-router';
 import compose from 'recompose/compose';
 
